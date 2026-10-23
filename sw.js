@@ -9,7 +9,7 @@ try {
   // بدون اتصال أو OneSignal غير مفعّل: يستمر الموقع بالعمل
 }
 
-const CACHE = 'siraj-quiz-v1';
+const CACHE = 'siraj-quiz-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -48,6 +48,7 @@ self.addEventListener('fetch', event => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // Apps Script و OneSignal و YouTube تمر مباشرة
+  if (/\.(mp4|webm|mov)$/i.test(url.pathname)) return; // الفيديو يُبث مباشرة من الخادم ولا يُخزَّن
 
   // الصفحة نفسها: الشبكة أولاً (لتصل التحديثات فوراً)، والنسخة المخزنة عند انقطاع الاتصال
   if (req.mode === 'navigate' || url.pathname.endsWith('/') || url.pathname.endsWith('.html')) {

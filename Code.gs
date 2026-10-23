@@ -45,7 +45,7 @@ const DEFAULT_SETTINGS = [
   ['answerWindowMinutes', '60', 'مدة فتح الإجابة بالدقائق بعد طرح السؤال'],
   ['finalEveningDate', '', 'موعد أمسية الفائزين (yyyy-MM-dd HH:mm) أو اتركه فارغاً لـ "يُعلن قريباً"'],
   ['finalEveningLocation', '', 'مكان أمسية الفائزين (اختياري)'],
-  ['instagramUrl', 'https://www.instagram.com/', 'رابط حساب إنستغرام لتحدي التصوير'],
+  ['instagramUrl', 'https://www.instagram.com/siragt123t/', 'رابط حساب إنستغرام لتحدي التصوير'],
   ['videoUrl', '', 'رابط الفيديو التعريفي (يوتيوب أو ملف mp4)'],
   ['emailDomain', 'squ.edu.om', 'نطاق البريد الجامعي المقبول (يُقبل أي نطاق فرعي منه مثل student.squ.edu.om)'],
   ['siteUrl', '', 'رابط الموقع بعد النشر (يُستخدم في الإشعارات)'],

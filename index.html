@@ -707,7 +707,7 @@ dialog::backdrop{background:rgba(15,42,87,.45);-webkit-backdrop-filter:blur(3px)
     </div>
     <div class="photo-cta reveal">
       <p><strong>السحب على أكثر من 10 فائزين</strong><br>من بين كل المشاركات المنشورة مع الوسم <span class="hashtag">#مسابقة_سراج_الثقافية</span> وحساب المجموعة.</p>
-      <a class="btn btn--yellow" id="instaBtn" href="https://www.instagram.com/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg> حساب سراج على إنستغرام</a>
+      <a class="btn btn--yellow" id="instaBtn" href="https://www.instagram.com/siragt123t/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg> حساب سراج على إنستغرام</a>
     </div>
   </div>
 </section>
@@ -825,9 +825,9 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbxPmgiKxaKqVMsx_tgFx0gz
 const TEST_MODE = false;          // true = تجربة كل حالات منطقة السؤال بدون خادم (بيانات وهمية)
 const ALLOW_TEST_PARAM = true;    // يسمح بتفعيل الاختبار بإضافة ?test=1 للرابط. اجعله false قبل الإطلاق
 const ONESIGNAL_APP_ID = '';      // App ID من OneSignal (اتركه فارغاً لتعطيل الإشعارات)
-const VIDEO_URL = '';             // فيديو احتياطي إن لم يُضبط videoUrl في ورقة Settings (يوتيوب أو mp4)
+const VIDEO_URL = 'assets/video/siraj-opening.mp4'; // فيديو احتياطي إن لم يُضبط videoUrl في ورقة Settings (يوتيوب أو mp4)
 const SOCIAL = {
-  instagram: 'https://www.instagram.com/',
+  instagram: 'https://www.instagram.com/siragt123t/',
   x: '',
   whatsapp: '',
   email: ''
@@ -1496,7 +1496,7 @@ function renderVideo() {
       box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" title="الفيديو التعريفي بمجموعة سراج" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
     };
   } else if (/\.(mp4|webm|mov)(\?|#|$)/i.test(url)) {
-    box.innerHTML = `<video src="${esc(url)}" controls playsinline preload="metadata" poster="assets/og-image.jpg"></video>`;
+    box.innerHTML = `<video src="${esc(url)}" controls playsinline preload="metadata" poster="${/siraj-opening\.mp4/.test(url) ? 'assets/video/siraj-opening-poster.jpg' : 'assets/og-image.jpg'}"></video>`;
   } else {
     box.innerHTML = `<div class="video-empty"><div>${lampSvg('#fff')}<p>الفيديو التعريفي بمجموعة سراج<br>قريباً</p></div></div>`;
   }
@@ -1592,7 +1592,7 @@ function renderEvening() {
   else box.innerHTML = `<small>موعد الأمسية</small><b>يُعلن قريباً</b>`;
 }
 function renderSocials() {
-  const insta = App.settings.instagramUrl || SOCIAL.instagram;
+  const insta = (/instagram\.com\/?(\?.*)?$/i.test(App.settings.instagramUrl || '') ? '' : App.settings.instagramUrl) || SOCIAL.instagram;
   $('#instaBtn').href = insta;
   const items = [
     insta && { href: insta, icon: 'i-insta', label: 'إنستغرام' },
