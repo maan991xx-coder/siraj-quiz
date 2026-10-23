@@ -904,7 +904,17 @@ function onOpen() {
     .addToUi();
 }
 
-function ui_() { return SpreadsheetApp.getUi(); }
+// عند التشغيل من محرر Apps Script لا تتوفر واجهة الشيت، فتُكتب الرسائل في سجل التنفيذ بدلاً من النافذة
+function ui_() {
+  try { return SpreadsheetApp.getUi(); } catch (e) {
+    return {
+      alert: function () { console.log([].slice.call(arguments).filter(function (a) { return typeof a === 'string'; }).join(' — ')); return 'OK'; },
+      prompt: function () { return { getSelectedButton: function () { return 'CANCEL'; }, getResponseText: function () { return ''; } }; },
+      ButtonSet: { OK: 'OK', OK_CANCEL: 'OK_CANCEL', YES_NO: 'YES_NO' },
+      Button: { OK: 'OK', YES: 'YES', NO: 'NO', CANCEL: 'CANCEL' }
+    };
+  }
+}
 
 function promptQuestionId_(title) {
   const cfg = getConfig_();
