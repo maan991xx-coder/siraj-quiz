@@ -1,0 +1,14 @@
+key,value,description
+startDate,2026-11-15,أول يوم في المسابقة (yyyy-MM-dd)
+endDate,2026-12-09,آخر يوم في المسابقة (yyyy-MM-dd)
+questionTime,19:00,وقت طرح السؤال اليومي بتوقيت مسقط (HH:mm)
+answerWindowMinutes,60,مدة فتح الإجابة بالدقائق بعد طرح السؤال
+finalEveningDate,,موعد أمسية الفائزين (yyyy-MM-dd HH:mm) أو فارغ لـ "يُعلن قريباً"
+finalEveningLocation,,مكان أمسية الفائزين (اختياري)
+instagramUrl,https://www.instagram.com/,رابط حساب إنستغرام لتحدي التصوير
+videoUrl,,رابط الفيديو التعريفي (يوتيوب أو mp4)
+emailDomain,squ.edu.om,نطاق البريد الجامعي المقبول
+siteUrl,,رابط الموقع بعد النشر
+oneSignalSegment,Total Subscriptions,اسم شريحة المشتركين في OneSignal
+testMode,FALSE,TRUE لتفعيل وضع الاختبار على الخادم
+testOffsetMinutes,0,إزاحة ساعة الخادم بالدقائق في وضع الاختبار

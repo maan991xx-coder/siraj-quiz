@@ -1,0 +1,19 @@
+{
+  "name": "مسابقة سراج الثقافية",
+  "short_name": "مسابقة سراج",
+  "description": "سؤال كل يوم.. وأسرع إجابة صحيحة تفوز. مسابقة ثقافية من مجموعة سراج في جامعة السلطان قابوس.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5EFE3",
+  "theme_color": "#1E4C9A",
+  "categories": ["education", "entertainment"],
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

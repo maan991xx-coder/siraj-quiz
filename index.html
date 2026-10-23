@@ -1,0 +1,1886 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مسابقة سراج الثقافية</title>
+<meta name="description" content="مسابقة سراج الثقافية من مجموعة سراج في جامعة السلطان قابوس: سؤال كل يوم من الأحد إلى الأربعاء الساعة 7:00 مساءً، وأسرع إجابة صحيحة تفوز.">
+<meta name="theme-color" content="#1E4C9A">
+<meta property="og:title" content="مسابقة سراج الثقافية">
+<meta property="og:description" content="سؤال كل يوم.. وأسرع إجابة صحيحة تفوز. من 15 نوفمبر إلى 9 ديسمبر 2026.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="مسابقة سراج">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preload" href="assets/fonts/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/thmanyahserifdisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://script.google.com" crossorigin>
+<link rel="preconnect" href="https://script.googleusercontent.com" crossorigin>
+<style>
+/* =========================================================
+   خط ثمانية (Thmanyah) — ملفات محلية في assets/fonts
+   ========================================================= */
+@font-face{font-family:"Thmanyah Sans";src:url("assets/fonts/thmanyahsans-Light.woff2") format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url("assets/fonts/thmanyahsans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url("assets/fonts/thmanyahsans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url("assets/fonts/thmanyahsans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Thmanyah Serif Display";src:url("assets/fonts/thmanyahserifdisplay-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Thmanyah Serif Display";src:url("assets/fonts/thmanyahserifdisplay-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Thmanyah Serif Display";src:url("assets/fonts/thmanyahserifdisplay-Black.woff2") format("woff2");font-weight:900;font-display:swap}
+
+:root{
+  --blue:#1E4C9A; --blue-deep:#173d7d; --blue-ink:#0f2a57; --blue-soft:#e8eef8;
+  --yellow:#F2B705; --yellow-soft:#fff4cf; --red:#E8452C;
+  --sand:#F5EFE3; --sand-2:#ece3d1; --white:#fff;
+  --ink:#16213a; --muted:#5a6378; --line:rgba(30,76,154,.13); --line-strong:rgba(30,76,154,.24);
+  --ok:#1f8a5b; --err:#c4372a;
+  --radius:22px; --radius-sm:14px;
+  --sans:"Thmanyah Sans",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+  --serif:"Thmanyah Serif Display","Thmanyah Sans",Georgia,serif;
+  --gutter:20px; --maxw:1120px;
+  --header-h:66px;
+  --shadow:0 1px 0 rgba(15,42,87,.04),0 18px 40px -28px rgba(15,42,87,.35);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.75;color:var(--ink);background:var(--sand);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img,svg,video,iframe{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.25;margin:0;color:var(--blue-ink)}
+p{margin:0}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(72px,12vw,128px);position:relative}
+.section--white{background:var(--white)}
+.section--sand{background:var(--sand)}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;inset-inline-start:12px;top:-60px;background:var(--blue);color:#fff;padding:10px 16px;border-radius:12px;z-index:100;text-decoration:none}
+.skip:focus{top:12px}
+
+/* أزرار */
+.btn{--bg:var(--blue);--fg:#fff;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;
+  background:var(--bg);color:var(--fg);border:1.5px solid transparent;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;
+  transition:transform .2s var(--ease),background-color .2s,box-shadow .2s,opacity .2s;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none}
+.btn--yellow{--bg:var(--yellow);--fg:var(--blue-ink);box-shadow:0 10px 30px -12px rgba(242,183,5,.75)}
+.btn--ghost{--bg:transparent;--fg:#fff;border-color:rgba(255,255,255,.45)}
+.btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn--outline{--bg:transparent;--fg:var(--blue);border-color:var(--line-strong)}
+.btn--outline:hover{border-color:var(--blue);background:var(--blue-soft)}
+.btn--block{width:100%}
+.btn--sm{min-height:48px;padding:0 18px;font-size:.95rem}
+.btn svg{width:20px;height:20px;flex:none}
+.link-btn{background:none;border:0;padding:12px 4px;min-height:48px;color:var(--blue);font-weight:500;text-decoration:underline;text-underline-offset:5px;cursor:pointer}
+
+/* شارات */
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;font-size:.86rem;font-weight:500;line-height:1.4;
+  background:var(--blue-soft);color:var(--blue)}
+.chip--yellow{background:var(--yellow-soft);color:#7a5a00}
+.chip--white{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.chip--red{background:#fde9e5;color:#a8301d}
+.chip svg{width:16px;height:16px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(242,183,5,.2);flex:none}
+
+/* عناوين الأقسام */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;font-weight:500;color:var(--blue);margin-bottom:14px}
+.section-title{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:14px}
+.section-lead{font-size:clamp(1.02rem,2.6vw,1.15rem);color:var(--muted);max-width:60ch;font-weight:300}
+.section-head{margin-bottom:clamp(34px,6vw,56px)}
+.section-head--center{text-align:center}
+.section-head--center .section-lead{margin-inline:auto}
+
+/* الزخرفة الهندسية */
+.pattern{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;color:#fff}
+.pattern--hero{opacity:.09}
+.pattern--soft{opacity:.06}
+.pattern--blue{color:var(--blue);opacity:.06}
+
+/* المصباح */
+.lamp{width:100%;height:auto;overflow:visible}
+.lamp .halo{transform-origin:60px 112px;animation:halo 5s ease-in-out infinite}
+.lamp .flame{transform-origin:60px 128px;animation:flicker 3.2s ease-in-out infinite}
+@keyframes halo{0%,100%{opacity:.75;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}
+@keyframes flicker{0%,100%{transform:scaleY(1) scaleX(1)}35%{transform:scaleY(1.06) scaleX(.97)}70%{transform:scaleY(.97) scaleX(1.02)}}
+
+/* =========================================================
+   الهيدر
+   ========================================================= */
+.site-header{position:sticky;top:0;z-index:50;height:var(--header-h);background:rgba(245,239,227,.82);
+  -webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,background-color .3s}
+.site-header.scrolled{border-bottom-color:var(--line);background:rgba(255,255,255,.9)}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:48px}
+.brand img{height:38px;width:auto}
+.brand-fallback{font-family:var(--serif);font-weight:900;font-size:1.5rem;color:var(--blue)}
+.nav{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 12px;text-decoration:none;color:var(--ink);font-weight:500;font-size:.96rem;border-radius:10px;transition:color .2s,background-color .2s}
+.nav a:hover{color:var(--blue);background:var(--blue-soft)}
+.header-actions{display:flex;align-items:center;gap:8px}
+.header-actions .btn{min-height:44px;padding:0 18px;font-size:.95rem}
+.menu-btn{width:48px;height:48px;border-radius:14px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;cursor:pointer}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--blue);border-radius:2px;position:relative;transition:transform .25s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;inset-inline:0;height:2px;background:var(--blue);border-radius:2px;transition:transform .25s}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-open .menu-btn span{background:transparent}
+.menu-open .menu-btn span::before{transform:translateY(6px) rotate(45deg)}
+.menu-open .menu-btn span::after{transform:translateY(-6px) rotate(-45deg)}
+.mobile-nav{position:fixed;inset:var(--header-h) 0 auto 0;z-index:49;background:#fff;border-bottom:1px solid var(--line);
+  padding:10px var(--gutter) 22px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:all .25s var(--ease);box-shadow:var(--shadow)}
+.menu-open .mobile-nav{transform:none;opacity:1;visibility:visible}
+.mobile-nav a{display:flex;align-items:center;min-height:52px;padding:0 6px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:500;font-size:1.05rem}
+.mobile-nav a:last-child{border-bottom:0}
+@media (min-width:1000px){.nav{display:flex;gap:2px}.menu-btn{display:none}.mobile-nav{display:none}}
+
+/* =========================================================
+   الواجهة (Hero)
+   ========================================================= */
+.hero{position:relative;background:radial-gradient(120% 80% at 50% 0%,#2559b0 0%,var(--blue) 45%,var(--blue-deep) 100%);color:#fff;overflow:hidden;
+  padding-block:clamp(44px,9vw,96px) clamp(64px,10vw,110px)}
+.hero-glow{position:absolute;width:min(560px,120vw);aspect-ratio:1;top:-8%;inset-inline-start:50%;transform:translateX(50%);
+  background:radial-gradient(closest-side,rgba(242,183,5,.32),rgba(242,183,5,0));pointer-events:none}
+.hero-inner{position:relative;display:grid;gap:clamp(34px,6vw,56px);align-items:center}
+.hero-copy{text-align:center}
+.hero-lamp{width:86px;margin:0 auto 18px}
+.hero h1{color:#fff;font-weight:900;font-size:clamp(2.6rem,11vw,5.2rem);line-height:1.12;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero-tagline{font-size:clamp(1.15rem,4.2vw,1.6rem);font-weight:300;color:rgba(255,255,255,.92);margin-bottom:24px}
+.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:30px}
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.video-card{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--blue-ink);aspect-ratio:16/9;
+  border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 80px -40px rgba(0,0,0,.55)}
+.video-card iframe,.video-card video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.video-facade{position:absolute;inset:0;display:grid;place-items:center;border:0;padding:0;cursor:pointer;background:transparent;color:#fff}
+.video-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .3s,transform .6s var(--ease)}
+.video-facade:hover img{opacity:1;transform:scale(1.02)}
+.play{position:relative;width:76px;height:76px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;
+  box-shadow:0 0 0 12px rgba(242,183,5,.18),0 18px 40px -10px rgba(0,0,0,.5)}
+.play svg{width:28px;height:28px;color:var(--blue-ink);margin-inline-end:-4px}
+.video-empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px}
+.video-empty .lamp{width:48px;margin:0 auto 8px}
+.video-empty p{color:rgba(255,255,255,.8);font-weight:300}
+
+.countdown-wrap{position:relative;margin-top:clamp(34px,6vw,54px);text-align:center}
+.countdown-label{font-size:1rem;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:10px}
+.countdown{display:flex;justify-content:center;gap:clamp(8px,2.4vw,16px);direction:rtl}
+.cd-unit{min-width:clamp(70px,19vw,116px);padding:clamp(12px,2.8vw,20px) 6px clamp(10px,2vw,14px);border-radius:var(--radius-sm);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+.cd-num{display:block;font-family:var(--serif);font-weight:900;font-size:clamp(2.1rem,9vw,3.9rem);line-height:1;font-variant-numeric:tabular-nums;color:#fff}
+.cd-unit:last-child .cd-num{color:var(--yellow)}
+.cd-txt{display:block;margin-top:8px;font-size:.85rem;color:rgba(255,255,255,.75)}
+.countdown-note{margin-top:14px;font-size:.92rem;color:rgba(255,255,255,.72);font-weight:300}
+.countdown--light .cd-unit{background:var(--blue-soft);border-color:var(--line)}
+.countdown--light .cd-num{color:var(--blue)}
+.countdown--light .cd-unit:last-child .cd-num{color:#c48f00}
+.countdown--light .cd-txt{color:var(--muted)}
+.countdown--sm .cd-unit{min-width:64px;padding:10px 4px 8px}
+.countdown--sm .cd-num{font-size:1.9rem}
+.live-now{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:clamp(1.4rem,5vw,2rem);color:#fff}
+.pulse{width:12px;height:12px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 0 rgba(242,183,5,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,183,5,.65)}70%{box-shadow:0 0 0 14px rgba(242,183,5,0)}100%{box-shadow:0 0 0 0 rgba(242,183,5,0)}}
+@media (min-width:960px){
+  .hero-inner{grid-template-columns:1.05fr .95fr}
+  .hero-copy{text-align:start}
+  .hero-lamp{margin-inline:0}
+  .hero-meta,.hero-ctas{justify-content:flex-start}
+}
+
+/* =========================================================
+   منطقة السؤال
+   ========================================================= */
+.qzone{margin-top:-46px;position:relative;z-index:2}
+.qcard{position:relative;background:#fff;border-radius:28px;border:1px solid var(--line);box-shadow:var(--shadow);
+  padding:clamp(26px,5vw,52px);overflow:hidden;min-height:260px}
+.qcard::before{content:"";position:absolute;inset-inline:0;top:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--yellow),var(--blue))}
+.qhead{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:20px}
+.qtitle{font-size:clamp(1.5rem,5vw,2.2rem);margin-bottom:10px}
+.qtext{font-family:var(--serif);font-weight:700;font-size:clamp(1.45rem,5.2vw,2.3rem);line-height:1.55;color:var(--blue-ink);margin:6px 0 26px}
+.qsub{color:var(--muted);font-weight:300;font-size:1.05rem;max-width:56ch}
+.qstate{display:grid;gap:22px;justify-items:center;text-align:center}
+.qstate .lamp{width:70px}
+.qstate .countdown{margin-top:4px}
+.qactions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.info-list{display:grid;gap:10px;width:100%;max-width:520px;margin:0 auto;text-align:start}
+.info-item{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--radius-sm);background:var(--sand);border:1px solid var(--line)}
+.info-item svg{width:22px;height:22px;color:var(--blue);flex:none}
+.info-item b{display:block;font-weight:700;color:var(--blue-ink)}
+.info-item small{display:block;color:var(--muted);font-size:.88rem}
+.closing-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;border-radius:var(--radius-sm);background:var(--yellow-soft);color:#6d5000;font-weight:500;margin-bottom:22px;font-size:.95rem}
+.closing-bar b{font-variant-numeric:tabular-nums;font-family:var(--serif);font-size:1.15rem}
+.answer-form{display:grid;gap:14px}
+.options{display:grid;gap:10px}
+@media (min-width:640px){.options{grid-template-columns:1fr 1fr}}
+.option{position:relative}
+.option input{position:absolute;opacity:0;pointer-events:none}
+.option label{display:flex;align-items:center;gap:14px;min-height:60px;padding:12px 18px;border-radius:16px;border:1.5px solid var(--line-strong);background:#fff;
+  cursor:pointer;font-weight:500;font-size:1.08rem;transition:border-color .15s,background-color .15s,box-shadow .15s}
+.option label::before{content:"";width:22px;height:22px;border-radius:50%;border:2px solid var(--line-strong);flex:none;transition:all .15s}
+.option input:checked + label{border-color:var(--blue);background:var(--blue-soft);box-shadow:0 0 0 3px rgba(30,76,154,.12)}
+.option input:checked + label::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.option input:focus-visible + label{outline:3px solid var(--yellow);outline-offset:2px}
+.one-shot{display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:#7a4a00;background:#fff7e0;border:1px solid #f4e1a6;border-radius:12px;padding:10px 14px}
+.one-shot svg{width:20px;height:20px;flex:none;margin-top:3px}
+.success-mark{width:76px;height:76px;border-radius:50%;background:#e7f5ee;display:grid;place-items:center;color:var(--ok)}
+.success-mark svg{width:38px;height:38px}
+.stamp{font-family:var(--serif);font-weight:700;font-size:clamp(1.3rem,5vw,1.8rem);color:var(--blue-ink);font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.skeleton{height:18px;border-radius:9px;background:linear-gradient(90deg,var(--sand) 0%,#fff 50%,var(--sand) 100%);background-size:200% 100%;animation:shimmer 1.4s infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+.alert{padding:12px 16px;border-radius:12px;font-size:.95rem;font-weight:500}
+.alert--err{background:#fdecea;color:var(--err);border:1px solid #f5c6c0}
+.alert--info{background:var(--blue-soft);color:var(--blue);border:1px solid var(--line)}
+.alert--ok{background:#e7f5ee;color:var(--ok);border:1px solid #bfe3d0}
+
+/* حقول */
+.field{display:grid;gap:8px}
+.field label,.field .label{font-weight:500;font-size:.98rem;color:var(--blue-ink)}
+.field small.hint{color:var(--muted);font-size:.85rem;font-weight:300}
+.input{width:100%;min-height:56px;padding:12px 18px;border-radius:var(--radius-sm);border:1.5px solid var(--line-strong);background:#fff;font-size:1.05rem;
+  transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none}
+.input::placeholder{color:#9aa1b2;font-weight:300}
+.input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(30,76,154,.12)}
+.input[aria-invalid="true"]{border-color:var(--err);box-shadow:0 0 0 4px rgba(196,55,42,.1)}
+.input--ltr{direction:ltr;text-align:right}
+.field-error{color:var(--err);font-size:.88rem;font-weight:500;min-height:0}
+.field-error:empty{display:none}
+.segmented{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.segmented input{position:absolute;opacity:0;pointer-events:none}
+.segmented label{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:var(--radius-sm);border:1.5px solid var(--line-strong);
+  background:#fff;cursor:pointer;font-weight:500;transition:all .15s}
+.segmented input:checked + label{border-color:var(--blue);background:var(--blue);color:#fff}
+.segmented input:focus-visible + label{outline:3px solid var(--yellow);outline-offset:2px}
+
+/* =========================================================
+   التسجيل
+   ========================================================= */
+.reg-grid{display:grid;gap:clamp(30px,5vw,60px);align-items:start}
+@media (min-width:960px){.reg-grid{grid-template-columns:.85fr 1.15fr}}
+.reg-points{display:grid;gap:14px;margin-top:26px}
+.reg-point{display:flex;gap:14px;align-items:flex-start}
+.reg-point .ic{width:44px;height:44px;border-radius:14px;background:var(--blue-soft);display:grid;place-items:center;flex:none;color:var(--blue)}
+.reg-point .ic svg{width:22px;height:22px}
+.reg-point b{display:block;color:var(--blue-ink)}
+.reg-point p{color:var(--muted);font-weight:300;font-size:.95rem}
+.form-card{background:#fff;border-radius:28px;border:1px solid var(--line);box-shadow:var(--shadow);padding:clamp(22px,4.5vw,40px)}
+.form-grid{display:grid;gap:18px}
+@media (min-width:640px){.form-grid--2{grid-template-columns:1fr 1fr}}
+.form-foot{display:grid;gap:12px;margin-top:8px}
+.form-switch{text-align:center;color:var(--muted);font-size:.95rem}
+.me-card{text-align:center;display:grid;gap:14px;justify-items:center}
+.me-avatar{width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-family:var(--serif);font-size:2rem;font-weight:900;
+  box-shadow:0 0 0 8px var(--blue-soft)}
+.me-name{font-family:var(--serif);font-weight:700;font-size:1.6rem;color:var(--blue-ink)}
+.me-meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+
+/* =========================================================
+   كيف تشارك
+   ========================================================= */
+.steps{display:grid;gap:16px;counter-reset:step}
+@media (min-width:640px){.steps{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px 26px;transition:transform .3s var(--ease),box-shadow .3s}
+.step:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.step-num{position:absolute;top:18px;inset-inline-end:20px;font-family:var(--serif);font-weight:900;font-size:2.6rem;line-height:1;color:var(--blue-soft)}
+.step-ic{width:58px;height:58px;border-radius:18px;background:var(--blue);color:#fff;display:grid;place-items:center;margin-bottom:20px;position:relative}
+.step-ic::after{content:"";position:absolute;inset:-6px;border-radius:22px;border:1px solid var(--line)}
+.step-ic svg{width:28px;height:28px}
+.step:nth-child(4) .step-ic{background:var(--yellow);color:var(--blue-ink)}
+.step h3{font-size:1.3rem;margin-bottom:8px}
+.step p{color:var(--muted);font-weight:300;font-size:.97rem}
+
+/* =========================================================
+   جدول المسابقة
+   ========================================================= */
+.cal-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(16px,3.5vw,34px);box-shadow:var(--shadow)}
+.cal-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}
+.cal-range{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--blue-ink)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.88rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.lg{width:14px;height:14px;border-radius:5px;flex:none}
+.lg--q{background:var(--blue)}
+.lg--lec{background:var(--yellow)}
+.lg--theme{background:#fff;border:2px solid var(--blue)}
+.lg--today{background:#fff;box-shadow:0 0 0 2px var(--yellow)}
+.lg--past{background:var(--sand-2)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(4px,1.2vw,10px)}
+.cal-dow{text-align:center;font-size:clamp(.68rem,2.4vw,.88rem);font-weight:500;color:var(--muted);padding-bottom:4px}
+.cal-dow.off{opacity:.55}
+.cal-cell{position:relative;aspect-ratio:1/1.08;border-radius:clamp(10px,2vw,16px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  font-variant-numeric:tabular-nums;border:1px solid transparent;padding:4px;min-width:0}
+.cal-cell .d{font-weight:700;font-size:clamp(.95rem,3.4vw,1.35rem);line-height:1}
+.cal-cell .m{font-size:clamp(.55rem,1.9vw,.72rem);opacity:.8;line-height:1.2}
+.cal-cell .qn{font-size:clamp(.55rem,1.9vw,.75rem);font-weight:500;line-height:1.2;white-space:nowrap}
+@media (max-width:479px){.cal-cell .m{display:none}.cal-cell .badge{top:3px;inset-inline-end:3px;width:11px;height:11px}}
+.cal-cell.off{color:#a39a87;background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(0,0,0,.025) 6px 12px)}
+.cal-cell.q{background:var(--blue);color:#fff;cursor:pointer;transition:transform .2s var(--ease)}
+.cal-cell.q:hover{transform:translateY(-2px)}
+.cal-cell.q.themed{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.cal-cell.q.lecture{background:var(--yellow);color:var(--blue-ink)}
+.cal-cell.q.past{background:var(--sand-2);color:#8a826f;border-color:transparent}
+.cal-cell.q.past::after{content:"";position:absolute;top:6px;inset-inline-start:6px;width:clamp(12px,3vw,16px);height:clamp(12px,3vw,16px);border-radius:50%;
+  background:var(--ok) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/70% no-repeat}
+.cal-cell.today{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--yellow),0 0 22px 4px rgba(242,183,5,.55)}
+.cal-cell .badge{position:absolute;top:5px;inset-inline-end:5px;width:clamp(12px,3vw,16px);height:clamp(12px,3vw,16px)}
+.cal-cell.selected{outline:3px solid var(--blue-ink);outline-offset:2px}
+.cal-detail{margin-top:18px;padding:16px 18px;border-radius:var(--radius-sm);background:var(--sand);border:1px solid var(--line);display:flex;gap:14px;align-items:flex-start;min-height:72px}
+.cal-detail .lamp{width:34px;flex:none}
+.cal-detail b{color:var(--blue-ink)}
+.cal-detail p{color:var(--muted);font-size:.95rem}
+.cal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.special-list{display:grid;gap:10px;margin-top:22px}
+@media (min-width:760px){.special-list{grid-template-columns:1fr 1fr}}
+.special{display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:var(--radius-sm);border:1px solid var(--line);background:#fff}
+.special .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;flex:none}
+.special .ic svg{width:22px;height:22px}
+.special.lecture .ic{background:var(--yellow-soft);color:#7a5a00}
+.special.themed .ic{background:var(--blue-soft);color:var(--blue)}
+.special b{display:block;color:var(--blue-ink)}
+.special small{color:var(--muted)}
+
+/* =========================================================
+   الفائزون
+   ========================================================= */
+.winners-grid{display:grid;gap:14px}
+@media (min-width:640px){.winners-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.winners-grid{grid-template-columns:repeat(3,1fr)}}
+.winner{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;overflow:hidden}
+.winner::after{content:"";position:absolute;width:160px;height:160px;inset-inline-end:-60px;top:-60px;border-radius:50%;background:radial-gradient(closest-side,rgba(242,183,5,.25),transparent)}
+.winner-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+.winner-n{font-family:var(--serif);font-weight:900;font-size:1.05rem;color:var(--blue)}
+.winner-date{font-size:.88rem;color:var(--muted)}
+.winner-name{font-family:var(--serif);font-weight:700;font-size:1.45rem;color:var(--blue-ink);line-height:1.4}
+.winner-tag{margin-top:10px}
+.empty{background:#fff;border:1px dashed var(--line-strong);border-radius:var(--radius);padding:clamp(30px,6vw,54px) 22px;text-align:center;display:grid;gap:12px;justify-items:center}
+.empty .lamp{width:60px}
+.empty p{color:var(--muted);font-weight:300;max-width:46ch}
+
+/* =========================================================
+   تحدي التصوير
+   ========================================================= */
+.photo{background:linear-gradient(180deg,var(--blue) 0%,var(--blue-deep) 100%);color:#fff;overflow:hidden}
+.photo .section-title{color:#fff}
+.photo .section-lead{color:rgba(255,255,255,.82)}
+.photo .eyebrow{color:var(--yellow)}
+.ideas{display:grid;gap:14px;margin-bottom:34px}
+@media (min-width:760px){.ideas{grid-template-columns:repeat(3,1fr)}}
+.idea{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:26px 22px;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.idea .ic{width:52px;height:52px;border-radius:16px;background:rgba(242,183,5,.16);color:var(--yellow);display:grid;place-items:center;margin-bottom:18px}
+.idea .ic svg{width:26px;height:26px}
+.idea h3{color:#fff;font-size:1.25rem;margin-bottom:6px}
+.idea p{color:rgba(255,255,255,.75);font-weight:300;font-size:.95rem}
+.photo-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px;padding:22px;border-radius:var(--radius);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
+.photo-cta p{flex:1 1 260px;color:rgba(255,255,255,.88)}
+.photo-cta strong{color:var(--yellow);font-family:var(--serif);font-size:1.25rem}
+.hashtag{direction:rtl;font-weight:700;color:#fff}
+
+/* =========================================================
+   أمسية الفائزين
+   ========================================================= */
+.evening-card{position:relative;max-width:860px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:32px;
+  padding:clamp(34px,7vw,70px) clamp(22px,5vw,60px);box-shadow:var(--shadow);overflow:hidden}
+.evening-card .lamp{width:110px;margin:0 auto 22px}
+.evening-card .section-title{margin-bottom:16px}
+.evening-card p{color:var(--muted);font-weight:300;font-size:1.08rem;max-width:58ch;margin-inline:auto}
+.evening-steps{display:grid;gap:10px;margin:28px auto 30px;max-width:600px;text-align:start}
+.evening-step{display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:var(--radius-sm);background:var(--sand)}
+.evening-step span{width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.evening-step:last-child span{background:var(--yellow);color:var(--blue-ink)}
+.evening-date{display:inline-flex;flex-direction:column;gap:4px;padding:16px 28px;border-radius:20px;background:var(--blue);color:#fff}
+.evening-date small{color:rgba(255,255,255,.75)}
+.evening-date b{font-family:var(--serif);font-size:1.4rem}
+
+/* =========================================================
+   الشركاء
+   ========================================================= */
+.partners{display:grid;gap:16px}
+@media (min-width:860px){.partners{grid-template-columns:1.6fr 1fr}}
+.partner{position:relative;background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(24px,4vw,40px);display:grid;gap:18px;align-content:start;overflow:hidden}
+.partner--main{border-color:rgba(232,69,44,.25)}
+.partner--main::before{content:"";position:absolute;inset-inline:0;top:0;height:5px;background:var(--red)}
+.partner-logo{display:grid;place-items:center;background:var(--sand);border-radius:20px;min-height:170px;padding:22px}
+.partner--main .partner-logo{min-height:230px;background:#fff7f5}
+.partner-logo img{max-height:150px;width:auto;object-fit:contain}
+.partner--main .partner-logo img{max-height:190px}
+.partner h3{font-size:1.5rem}
+.partner p{color:var(--muted);font-weight:300}
+
+/* =========================================================
+   الفوتر
+   ========================================================= */
+.footer{position:relative;background:var(--blue-ink);color:#fff;overflow:hidden;padding-block:clamp(56px,9vw,90px) 28px}
+.footer-inner{position:relative;display:grid;gap:30px;justify-items:center;text-align:center}
+.footer-logo{height:64px;width:auto}
+.footer-slogan{font-family:var(--serif);font-weight:700;font-size:clamp(1.4rem,5vw,2rem);color:#fff}
+.footer-slogan em{font-style:normal;color:var(--yellow)}
+.socials{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.social{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);transition:background-color .2s,transform .2s}
+.social:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+.social svg{width:22px;height:22px}
+.footer-squ{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.7);font-size:.92rem}
+.footer-squ img{height:40px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.footer-bottom{position:relative;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.85rem;color:rgba(255,255,255,.55)}
+
+/* =========================================================
+   نوافذ، تنبيهات، وضع الاختبار
+   ========================================================= */
+dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;margin:0}
+dialog::backdrop{background:rgba(15,42,87,.45);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.sheet{position:fixed;inset:auto 0 0 0;margin:0 auto;max-width:560px;background:#fff;border-radius:28px 28px 0 0;padding:14px 22px calc(26px + env(safe-area-inset-bottom));
+  box-shadow:0 -20px 60px -20px rgba(0,0,0,.3);max-height:92vh;overflow:auto;animation:sheetIn .3s var(--ease)}
+@media (min-width:640px){.sheet{inset:50% 0 auto 0;transform:translateY(-50%);border-radius:28px;animation:fadeIn .25s var(--ease)}}
+@keyframes sheetIn{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.sheet-grab{width:44px;height:5px;border-radius:5px;background:var(--sand-2);margin:0 auto 16px}
+.sheet h3{font-size:1.5rem;margin-bottom:6px}
+.sheet .sub{color:var(--muted);font-weight:300;margin-bottom:20px}
+.sheet-list{display:grid;gap:12px}
+.sheet-item{display:flex;gap:14px;align-items:center;width:100%;min-height:72px;padding:14px 16px;border-radius:18px;border:1.5px solid var(--line);background:#fff;text-align:start;cursor:pointer;transition:border-color .15s,background-color .15s}
+.sheet-item:hover{border-color:var(--blue);background:var(--blue-soft)}
+.sheet-item .ic{width:46px;height:46px;border-radius:14px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;flex:none}
+.sheet-item .ic svg{width:24px;height:24px}
+.sheet-item b{display:block;color:var(--blue-ink)}
+.sheet-item small{color:var(--muted);font-size:.88rem}
+.ios-note{margin-top:14px;padding:14px 16px;border-radius:16px;background:var(--yellow-soft);color:#5f4600;font-size:.93rem}
+.ios-note ol{margin:8px 0 0;padding-inline-start:20px}
+.sheet-close{margin-top:16px}
+.confirm-answer{padding:16px 18px;border-radius:16px;background:var(--blue-soft);color:var(--blue-ink);font-family:var(--serif);font-weight:700;font-size:1.3rem;margin:10px 0 18px;word-break:break-word}
+.toast{position:fixed;inset-inline:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:90;margin:0 auto;max-width:480px;padding:14px 18px;border-radius:16px;background:var(--blue-ink);color:#fff;
+  box-shadow:0 20px 40px -14px rgba(0,0,0,.45);font-weight:500;transform:translateY(140%);opacity:0;transition:all .35s var(--ease);pointer-events:none}
+.toast.show{transform:none;opacity:1}
+.test-banner{position:relative;z-index:60;background:repeating-linear-gradient(135deg,#ffe58a 0 14px,#ffd84d 14px 28px);color:#4d3800;text-align:center;font-weight:700;font-size:.9rem;padding:8px 14px}
+.test-fab{position:fixed;inset-inline-start:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:70;min-height:52px;padding:0 18px;border-radius:999px;border:0;background:#ffd84d;color:#4d3800;font-weight:700;box-shadow:0 12px 30px -10px rgba(0,0,0,.4);cursor:pointer}
+.test-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.test-grid button{min-height:52px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font-weight:500;font-size:.92rem;cursor:pointer;padding:6px 10px;line-height:1.35}
+.test-grid button:hover{border-color:var(--blue);background:var(--blue-soft)}
+.test-grid button.wide{grid-column:1/-1}
+.test-clock{margin:10px 0 14px;font-size:.92rem;color:var(--muted)}
+
+/* حركات الدخول */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}
+.fade-swap{animation:swap .45s var(--ease)}
+@keyframes swap{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+  .lamp .halo,.lamp .flame,.pulse{animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#question">انتقل إلى سؤال اليوم</a>
+
+<!-- تعريفات SVG المشتركة: الزخرفة الهندسية والأيقونات -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="girih" width="88" height="88" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round">
+        <path d="M44 13 L52.6 27.4 L69 23.3 L64.9 39.7 L79.3 48.3 L64.9 56.9 L69 73.3 L52.6 69.2 L44 83.6 L35.4 69.2 L19 73.3 L23.1 56.9 L8.7 48.3 L23.1 39.7 L19 23.3 L35.4 27.4 Z" transform="translate(0 -4.3)"/>
+        <rect x="26" y="26" width="36" height="36" transform="rotate(45 44 44)"/>
+        <rect x="26" y="26" width="36" height="36"/>
+        <circle cx="44" cy="44" r="9"/>
+        <path d="M44 0 V9 M44 79 V88 M0 44 H9 M79 44 H88 M0 0 L14 14 M88 0 L74 14 M0 88 L14 74 M88 88 L74 74"/>
+      </g>
+    </pattern>
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFE9A0" stop-opacity="1"/>
+      <stop offset=".35" stop-color="#F2B705" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#F2B705" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flameFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE38A"/><stop offset="1" stop-color="#F2B705"/>
+    </linearGradient>
+    <symbol id="lamp" viewBox="0 0 120 200">
+      <circle class="halo" cx="60" cy="112" r="60" fill="url(#flameGlow)"/>
+      <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 4 V16"/><circle cx="60" cy="21" r="5"/>
+        <path d="M40 50 C44 34 52 28 60 26 C68 28 76 34 80 50 Z"/>
+        <path d="M32 50 H88"/>
+        <path d="M38 56 C27 88 27 126 37 150 H83 C93 126 93 88 82 56 Z"/>
+        <path d="M60 56 V150 M48 57 C41 90 41 124 46 150 M72 57 C79 90 79 124 74 150" opacity=".55"/>
+        <path d="M32 150 H88 L82 164 H38 Z"/><path d="M45 164 H75 L71 176 H49 Z"/>
+      </g>
+      <path class="flame" d="M60 90 C49 106 50 123 60 129 C70 123 71 106 60 90 Z" fill="url(#flameFill)"/>
+      <path class="flame" d="M60 106 C55 114 56 122 60 125 C64 122 65 114 60 106 Z" fill="#fff" opacity=".7"/>
+    </symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></g></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M2.5 21c.8-4 3.8-6 7.5-6s6.7 2 7.5 6M19 8v6M16 11h6"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z"/><path d="M10 20a2.2 2.2 0 0 0 4 0"/></g></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="3"/><path d="M3 10h18M8 2.5v4M16 2.5v4M8 14.5h.01M12 14.5h.01M16 14.5h.01M8 17.5h.01M12 17.5h.01"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.6"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.8"/></g></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4zM9 4v13M15 6.5v13"/></g></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" transform="scale(.9) translate(1.3 1.3)"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-.9-.8.8a4 4 0 0 1-2-2l.8-.8-.9-2z" stroke-width="1.4"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></g></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l2 2M15 8l2 2"/></g></symbol>
+  </defs>
+</svg>
+
+<div id="testBanner" class="test-banner" hidden>وضع الاختبار مفعّل: البيانات تجريبية ولا تُرسل للخادم</div>
+
+<!-- ======================= الهيدر ======================= -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#hero" aria-label="مجموعة سراج — العودة للأعلى">
+      <img src="assets/siraj-logo-blue.png" alt="شعار مجموعة سراج" width="110" height="38" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-fallback',textContent:'سراج'}))">
+    </a>
+    <nav class="nav" aria-label="روابط الأقسام">
+      <a href="#question">سؤال اليوم</a>
+      <a href="#how">كيف تشارك</a>
+      <a href="#schedule">الجدول</a>
+      <a href="#winners">الفائزون</a>
+      <a href="#photo">تحدي التصوير</a>
+      <a href="#evening">أمسية الفائزين</a>
+      <a href="#partners">الشركاء</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn--yellow" href="#register" data-cta-register>سجّل الآن</a>
+      <button class="menu-btn" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="mobileNav"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="روابط الأقسام">
+  <a href="#question">سؤال اليوم</a>
+  <a href="#register">التسجيل</a>
+  <a href="#how">كيف تشارك</a>
+  <a href="#schedule">جدول المسابقة</a>
+  <a href="#winners">فائزو المسابقة</a>
+  <a href="#photo">تحدي التصوير</a>
+  <a href="#evening">أمسية الفائزين</a>
+  <a href="#partners">الشركاء</a>
+</nav>
+
+<main id="main">
+<!-- ======================= الواجهة ======================= -->
+<section class="hero" id="hero" aria-labelledby="heroTitle">
+  <svg class="pattern pattern--hero" aria-hidden="true"><rect width="100%" height="100%" fill="url(#girih)"/></svg>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <svg viewBox="0 0 120 200" class="lamp hero-lamp" aria-hidden="true" style="color:#fff"><use href="#lamp"/></svg>
+      <p class="chip chip--white" style="margin-bottom:18px"><span class="dot"></span> مجموعة سراج · جامعة السلطان قابوس</p>
+      <h1 id="heroTitle">مسابقة سراج <em>الثقافية</em></h1>
+      <p class="hero-tagline">سؤال كل يوم.. وأسرع إجابة صحيحة تفوز</p>
+      <div class="hero-meta">
+        <span class="chip chip--white"><svg aria-hidden="true"><use href="#i-cal"/></svg> 15 نوفمبر – 9 ديسمبر 2026</span>
+        <span class="chip chip--white"><svg aria-hidden="true"><use href="#i-clock"/></svg> الأحد إلى الأربعاء · 7:00 مساءً</span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn--yellow" href="#register" data-cta-register>سجّل الآن</a>
+        <button class="btn btn--ghost" type="button" data-open-reminder><svg aria-hidden="true"><use href="#i-bell"/></svg> ذكّرني</button>
+      </div>
+    </div>
+    <div>
+      <div class="video-card" id="videoCard" aria-label="الفيديو التعريفي بمجموعة سراج"></div>
+    </div>
+  </div>
+  <div class="container countdown-wrap" id="heroCountdown" aria-live="polite"></div>
+</section>
+
+<!-- ======================= منطقة السؤال ======================= -->
+<section class="section section--sand" id="question" aria-labelledby="qzTitle" style="padding-top:0">
+  <div class="container qzone">
+    <h2 class="sr-only" id="qzTitle">سؤال اليوم</h2>
+    <div class="qcard" id="qcard" aria-live="polite">
+      <div style="display:grid;gap:14px">
+        <div class="skeleton" style="width:30%"></div>
+        <div class="skeleton" style="width:85%;height:28px"></div>
+        <div class="skeleton" style="width:60%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= التسجيل ======================= -->
+<section class="section section--white" id="register" aria-labelledby="regTitle">
+  <div class="container reg-grid">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span> التسجيل</p>
+      <h2 class="section-title" id="regTitle">سجّل مرة واحدة.. وجاوب كل يوم</h2>
+      <p class="section-lead">التسجيل يحفظ هويتك في المسابقة، فلا تحتاج لكتابة بياناتك مع كل سؤال. كل رقم جامعي له إجابة واحدة فقط لكل سؤال.</p>
+      <div class="reg-points">
+        <div class="reg-point"><span class="ic"><svg aria-hidden="true"><use href="#i-check"/></svg></span><div><b>إجابة واحدة لكل سؤال</b><p>أول إجابة تُرسلها هي المعتمدة ولا يمكن تعديلها.</p></div></div>
+        <div class="reg-point"><span class="ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><div><b>وقت الخادم هو الحكم</b><p>يُسجَّل وقت وصول إجابتك على الخادم بدقة الملّي ثانية.</p></div></div>
+        <div class="reg-point"><span class="ic"><svg aria-hidden="true"><use href="#i-key"/></svg></span><div><b>غيّرت جهازك؟</b><p>استعد حسابك برقمك الجامعي ورقم هاتفك المسجّل.</p></div></div>
+      </div>
+    </div>
+    <div class="form-card reveal" data-delay="1" id="regCard"></div>
+  </div>
+</section>
+
+<!-- ======================= كيف تشارك ======================= -->
+<section class="section section--sand" id="how" aria-labelledby="howTitle">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow"><span class="dot"></span> كيف تشارك</p>
+      <h2 class="section-title" id="howTitle">أربع خطوات وتكون في السباق</h2>
+    </div>
+    <div class="steps">
+      <article class="step reveal"><span class="step-num">1</span><div class="step-ic"><svg aria-hidden="true"><use href="#i-qr"/></svg></div><h3>امسح الباركود</h3><p>من إعلانات المسابقة في أرجاء الجامعة، أو افتح هذا الموقع مباشرة.</p></article>
+      <article class="step reveal" data-delay="1"><span class="step-num">2</span><div class="step-ic"><svg aria-hidden="true"><use href="#i-user"/></svg></div><h3>سجّل</h3><p>اسمك الثلاثي ورقمك الجامعي وهاتفك وبريدك الجامعي. مرة واحدة فقط.</p></article>
+      <article class="step reveal" data-delay="2"><span class="step-num">3</span><div class="step-ic"><svg aria-hidden="true"><use href="#i-bell"/></svg></div><h3>فعّل التذكير</h3><p>أضف المواعيد لتقويمك أو فعّل الإشعارات حتى لا يفوتك أي سؤال.</p></article>
+      <article class="step reveal" data-delay="3"><span class="step-num">4</span><div class="step-ic"><svg aria-hidden="true"><use href="#i-bolt"/></svg></div><h3>أجب أسرع</h3><p>الساعة 7:00 مساءً يظهر السؤال، وأسرع إجابة صحيحة بوقت الخادم تفوز.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= جدول المسابقة ======================= -->
+<section class="section section--white" id="schedule" aria-labelledby="calTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="dot"></span> جدول المسابقة</p>
+      <h2 class="section-title" id="calTitle">أربعة أسابيع، ستة عشر سؤالاً</h2>
+      <p class="section-lead">سؤال كل يوم من الأحد إلى الأربعاء الساعة 7:00 مساءً بتوقيت مسقط. اضغط على أي يوم لتعرف تفاصيله.</p>
+    </div>
+    <div class="cal-card reveal" data-delay="1">
+      <div class="cal-top">
+        <span class="cal-range" id="calRange">15 نوفمبر – 9 ديسمبر 2026</span>
+        <div class="legend" aria-label="دليل الألوان">
+          <span><i class="lg lg--q"></i> سؤال يومي</span>
+          <span><i class="lg lg--lec"></i> يوم محاضرة</span>
+          <span><i class="lg lg--theme"></i> يوم موضوعي</span>
+          <span><i class="lg lg--today"></i> اليوم</span>
+          <span><i class="lg lg--past"></i> انتهى</span>
+        </div>
+      </div>
+      <div class="cal" id="cal" role="grid" aria-label="تقويم المسابقة"></div>
+      <div class="cal-detail" id="calDetail" aria-live="polite">
+        <svg viewBox="0 0 120 200" class="lamp" aria-hidden="true" style="color:var(--blue)"><use href="#lamp"/></svg>
+        <div><b>اختر يوماً من التقويم</b><p>تظهر هنا تفاصيل اليوم: رقم السؤال ونوعه وموعده.</p></div>
+      </div>
+      <div class="special-list" id="specialList"></div>
+      <div class="cal-actions">
+        <button class="btn" type="button" id="icsBtn"><svg aria-hidden="true"><use href="#i-cal"/></svg> أضف المواعيد إلى تقويمي</button>
+        <button class="btn btn--outline" type="button" data-open-reminder><svg aria-hidden="true"><use href="#i-bell"/></svg> فعّل التذكير</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= الفائزون ======================= -->
+<section class="section section--sand" id="winners" aria-labelledby="winTitle">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="dot"></span> فائزو المسابقة</p>
+      <h2 class="section-title" id="winTitle">أضاءوا الطريق أولاً</h2>
+      <p class="section-lead">تُعلن أسماء الفائزين بعد اعتمادها من اللجنة الثقافية في مجموعة سراج.</p>
+    </div>
+    <div id="winnersList" class="reveal" data-delay="1"></div>
+  </div>
+</section>
+
+<!-- ======================= تحدي التصوير ======================= -->
+<section class="section photo" id="photo" aria-labelledby="photoTitle">
+  <svg class="pattern pattern--soft" aria-hidden="true"><rect width="100%" height="100%" fill="url(#girih)"/></svg>
+  <div class="container" style="position:relative">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="dot"></span> تحدي التصوير</p>
+      <h2 class="section-title" id="photoTitle">صوّر لحظتك مع سراج</h2>
+      <p class="section-lead">شاركنا صورتك أو مقطعك على إنستغرام مع وسم المسابقة، وادخل السحب على جوائز تحدي التصوير.</p>
+    </div>
+    <div class="ideas">
+      <article class="idea reveal"><div class="ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></div><h3>صوّر استعدادك للسؤال</h3><p>قبل الساعة 7 بدقائق: القهوة، الجوال، والتركيز.</p></article>
+      <article class="idea reveal" data-delay="1"><div class="ic"><svg aria-hidden="true"><use href="#i-map"/></svg></div><h3>أغرب مكان حليت منه</h3><p>في المكتبة؟ في الباص؟ في المختبر؟ أرِنا المكان.</p></article>
+      <article class="idea reveal" data-delay="2"><div class="ic"><svg aria-hidden="true"><use href="#i-camera"/></svg></div><h3>الكشك والمصباح بزاوية إبداعية</h3><p>التقط كشك سراج ومصباحه بزاوية لم يرها أحد.</p></article>
+    </div>
+    <div class="photo-cta reveal">
+      <p><strong>السحب على أكثر من 10 فائزين</strong><br>من بين كل المشاركات المنشورة مع الوسم <span class="hashtag">#مسابقة_سراج_الثقافية</span> وحساب المجموعة.</p>
+      <a class="btn btn--yellow" id="instaBtn" href="https://www.instagram.com/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg> حساب سراج على إنستغرام</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= أمسية الفائزين ======================= -->
+<section class="section section--sand" id="evening" aria-labelledby="evTitle">
+  <svg class="pattern pattern--blue" aria-hidden="true"><rect width="100%" height="100%" fill="url(#girih)"/></svg>
+  <div class="container" style="position:relative">
+    <div class="evening-card reveal">
+      <svg viewBox="0 0 120 200" class="lamp" aria-hidden="true" style="color:var(--blue)"><use href="#lamp"/></svg>
+      <p class="eyebrow"><span class="dot"></span> الختام</p>
+      <h2 class="section-title" id="evTitle">أمسية الفائزين</h2>
+      <p>كل فائز بسؤال من أسئلة المسابقة يُدعى إلى أمسية حضورية خاصة، يُطرح فيها السؤال الأخير.. ومن يجيب عنه يفوز بالجائزة الكبرى.</p>
+      <div class="evening-steps">
+        <div class="evening-step"><span>1</span> تفوز بأحد الأسئلة الستة عشر</div>
+        <div class="evening-step"><span>2</span> تصلك دعوة لحضور أمسية الفائزين</div>
+        <div class="evening-step"><span>3</span> السؤال الأخير.. والجائزة الكبرى</div>
+      </div>
+      <div class="evening-date" id="eveningDate"><small>موعد الأمسية</small><b>يُعلن قريباً</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= الشركاء ======================= -->
+<section class="section section--white" id="partners" aria-labelledby="partTitle">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow"><span class="dot"></span> الشركاء</p>
+      <h2 class="section-title" id="partTitle">بدعم من</h2>
+    </div>
+    <div class="partners">
+      <article class="partner partner--main reveal">
+        <div class="partner-logo"><img src="assets/electro-logo.png" alt="شعار إلكترو" loading="lazy"></div>
+        <div><span class="chip chip--red">الداعم الرسمي</span></div>
+        <h3>إلكترو</h3>
+        <p>الداعم الرسمي لمسابقة سراج الثقافية، شريكنا في إضاءة طريق المعرفة.</p>
+      </article>
+      <article class="partner reveal" data-delay="1">
+        <div class="partner-logo"><img src="assets/waraqiyat-logo.png" alt="شعار مكتبة الورقيات" loading="lazy"></div>
+        <div><span class="chip">داعم</span></div>
+        <h3>مكتبة الورقيات</h3>
+        <p>شريك المعرفة والكتاب في المسابقة.</p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ======================= الفوتر ======================= -->
+<footer class="footer">
+  <svg class="pattern pattern--soft" aria-hidden="true"><rect width="100%" height="100%" fill="url(#girih)"/></svg>
+  <div class="container footer-inner">
+    <img class="footer-logo" src="assets/siraj-logo.png" alt="شعار مجموعة سراج" loading="lazy" onerror="this.style.display='none'">
+    <p class="footer-slogan">سراج.. <em>يضيء</em> الطريق للمعرفة</p>
+    <div class="socials" id="socials"></div>
+    <div class="footer-squ"><img src="assets/squ-logo.png" alt="" loading="lazy" onerror="this.style.display='none'"><span>جامعة السلطان قابوس</span></div>
+  </div>
+  <div class="container footer-bottom">© 2026 مجموعة سراج. جميع الحقوق محفوظة.</div>
+</footer>
+
+<!-- نافذة التذكير -->
+<dialog id="reminderDlg" aria-labelledby="remTitle">
+  <div class="sheet" role="document">
+    <div class="sheet-grab" aria-hidden="true"></div>
+    <h3 id="remTitle">لا يفوتك أي سؤال</h3>
+    <p class="sub">اختر طريقة التذكير المناسبة لك.</p>
+    <div class="sheet-list">
+      <button class="sheet-item" type="button" id="remIcs"><span class="ic"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><span><b>أضف المواعيد إلى تقويمي</b><small>16 موعداً الساعة 7:00 مساءً مع تنبيه قبلها بـ10 دقائق</small></span></button>
+      <button class="sheet-item" type="button" id="remPush"><span class="ic"><svg aria-hidden="true"><use href="#i-bell"/></svg></span><span><b>فعّل إشعارات الموقع</b><small id="pushStatus">إشعار قبل كل سؤال بـ10 دقائق</small></span></button>
+    </div>
+    <div class="ios-note" id="iosNote" hidden>
+      <b>على الآيفون:</b> الإشعارات تعمل فقط بعد إضافة الموقع للشاشة الرئيسية (iOS 16.4 أو أحدث):
+      <ol>
+        <li>اضغط زر المشاركة <span aria-hidden="true">⬆️</span> في Safari.</li>
+        <li>اختر «إضافة إلى الشاشة الرئيسية».</li>
+        <li>افتح «مسابقة سراج» من الشاشة الرئيسية، ثم فعّل الإشعارات من هنا.</li>
+      </ol>
+    </div>
+    <button class="btn btn--outline btn--block sheet-close" type="button" data-close>إغلاق</button>
+  </div>
+</dialog>
+
+<!-- نافذة تأكيد الإجابة -->
+<dialog id="confirmDlg" aria-labelledby="cfTitle">
+  <div class="sheet" role="document">
+    <div class="sheet-grab" aria-hidden="true"></div>
+    <h3 id="cfTitle">تأكيد إجابتك</h3>
+    <p class="sub">لديك إجابة واحدة فقط لهذا السؤال، ولا يمكن تعديلها بعد الإرسال.</p>
+    <div class="confirm-answer" id="cfAnswer"></div>
+    <div style="display:grid;gap:10px">
+      <button class="btn btn--yellow btn--block" type="button" id="cfSend">نعم، أرسل الإجابة</button>
+      <button class="btn btn--outline btn--block" type="button" data-close>تعديل</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- لوحة وضع الاختبار -->
+<dialog id="testDlg" aria-labelledby="tsTitle">
+  <div class="sheet" role="document">
+    <div class="sheet-grab" aria-hidden="true"></div>
+    <h3 id="tsTitle">وضع الاختبار</h3>
+    <p class="test-clock" id="testClock"></p>
+    <div class="test-grid" id="testGrid"></div>
+    <button class="btn btn--outline btn--block sheet-close" type="button" data-close>إغلاق</button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   الإعدادات — عدّل هذه القيم فقط
+   ===================================================================== */
+const API_URL = 'https://script.google.com/macros/s/PASTE_YOUR_WEB_APP_ID/exec'; // رابط Google Apps Script Web App
+const TEST_MODE = false;          // true = تجربة كل حالات منطقة السؤال بدون خادم (بيانات وهمية)
+const ALLOW_TEST_PARAM = true;    // يسمح بتفعيل الاختبار بإضافة ?test=1 للرابط. اجعله false قبل الإطلاق
+const ONESIGNAL_APP_ID = '';      // App ID من OneSignal (اتركه فارغاً لتعطيل الإشعارات)
+const VIDEO_URL = '';             // فيديو احتياطي إن لم يُضبط videoUrl في ورقة Settings (يوتيوب أو mp4)
+const SOCIAL = {
+  instagram: 'https://www.instagram.com/',
+  x: '',
+  whatsapp: '',
+  email: ''
+};
+const DEFAULTS = {
+  startDate: '2026-11-15', endDate: '2026-12-09', questionTime: '19:00', answerWindowMinutes: 60,
+  instagramUrl: SOCIAL.instagram, videoUrl: VIDEO_URL, finalEvening: null, emailDomain: 'squ.edu.om'
+};
+
+/* =====================================================================
+   أدوات عامة
+   ===================================================================== */
+const TZ = 'Asia/Muscat';
+const TZ_OFFSET = 4 * 3600 * 1000;
+const DAY = 86400000;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const icon = (id, cls = '') => `<svg class="${cls}" aria-hidden="true"><use href="#${id}"/></svg>`;
+const lampSvg = (color = 'var(--blue)', cls = '') => `<svg viewBox="0 0 120 200" class="lamp ${cls}" aria-hidden="true" style="color:${color}"><use href="#lamp"/></svg>`;
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { } },
+  del(k) { try { localStorage.removeItem(k); } catch (e) { } }
+};
+const IS_MOCK = TEST_MODE || (ALLOW_TEST_PARAM && new URLSearchParams(location.search).has('test')) || /PASTE_YOUR/.test(API_URL);
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const pad2 = n => String(n).padStart(2, '0');
+function muscatMs(dateStr, hhmm = '00:00') {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  const [h, mi] = hhmm.split(':').map(Number);
+  return Date.UTC(y, m - 1, d, h || 0, mi || 0) - TZ_OFFSET;
+}
+function muscatDateStr(ms) {
+  const d = new Date(ms + TZ_OFFSET);
+  return `${d.getUTCFullYear()}-${pad2(d.getUTCMonth() + 1)}-${pad2(d.getUTCDate())}`;
+}
+function muscatDow(ms) { return new Date(ms + TZ_OFFSET).getUTCDay(); }
+const fmt = (opts) => new Intl.DateTimeFormat('ar-u-nu-latn', Object.assign({ timeZone: TZ }, opts));
+const F_DAY = fmt({ weekday: 'long', day: 'numeric', month: 'long' });
+const F_DAYM = fmt({ day: 'numeric', month: 'long' });
+const F_DAYFULL = fmt({ weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+const F_TIME = fmt({ hour: 'numeric', minute: '2-digit', hour12: true });
+const F_MONTH = fmt({ month: 'short' });
+const fmtDay = ms => F_DAY.format(ms);
+const fmtTime = ms => F_TIME.format(ms);
+function fmtStamp(ms) {
+  const d = new Date(ms + TZ_OFFSET);
+  return `${pad2(d.getUTCHours())}:${pad2(d.getUTCMinutes())}:${pad2(d.getUTCSeconds())}.${String(d.getUTCMilliseconds()).padStart(3, '0')}`;
+}
+const toLatinDigits = s => String(s == null ? '' : s).replace(/[\u0660-\u0669]/g, d => d.charCodeAt(0) - 0x0660).replace(/[\u06F0-\u06F9]/g, d => d.charCodeAt(0) - 0x06F0);
+function normalizeArabic(s) {
+  let t = toLatinDigits(s).toLowerCase();
+  t = t.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED]/g, '').replace(/\u0640/g, '')
+    .replace(/[\u0622\u0623\u0625\u0671]/g, '\u0627').replace(/\u0649/g, '\u064A').replace(/\u0629/g, '\u0647')
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ');
+  return t.replace(/\s+/g, ' ').trim();
+}
+function normalizePhone(p) {
+  let d = toLatinDigits(p).replace(/\D/g, '');
+  if (d.length > 8 && d.startsWith('00968')) d = d.slice(5); else if (d.length > 8 && d.startsWith('968')) d = d.slice(3);
+  return d;
+}
+let toastTimer;
+function toast(msg, ms = 3800) {
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), ms);
+}
+
+/* =====================================================================
+   حالة التطبيق
+   ===================================================================== */
+const App = {
+  settings: Object.assign({}, DEFAULTS),
+  schedule: [],
+  winners: [],
+  state: null,
+  user: store.get('siraj_user'),
+  offset: 0, bestRtt: Infinity,
+  lecture: null,              // { qid, code, answerType, options }
+  submitting: false,
+  firedTargets: new Set(),
+  loaded: false,
+  regMode: 'register',        // register | recover | me
+  selectedDay: null
+};
+const now = () => Date.now() + App.offset;
+
+/* =====================================================================
+   الاتصال بالخادم
+   ===================================================================== */
+class NetError extends Error { }
+async function api(action, payload = {}) {
+  const t0 = Date.now();
+  if (IS_MOCK) { const m = await Mock.handle(action, payload); syncClock(m.serverNow, t0, Date.now()); return m; }
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 20000);
+  let res;
+  try {
+    res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // يتجنب CORS preflight مع Apps Script
+      body: JSON.stringify(Object.assign({ action }, payload)),
+      redirect: 'follow', cache: 'no-store', signal: ctrl.signal
+    });
+  } catch (e) { throw new NetError('network'); } finally { clearTimeout(timer); }
+  if (!res.ok) throw new NetError('http_' + res.status);
+  let data;
+  try { data = await res.json(); } catch (e) { throw new NetError('bad_json'); } // صفحة خطأ من Google عند الضغط
+  syncClock(data.serverNow, t0, Date.now());
+  return data;
+}
+function syncClock(serverNow, t0, t1) {
+  if (!serverNow) return;
+  const rtt = t1 - t0;
+  const candidate = serverNow - (t0 + t1) / 2;
+  const jumped = Math.abs(candidate - App.offset) > 5000; // قفزة كبيرة في ساعة الخادم (مثل وضع الاختبار)
+  if (jumped) App.bestRtt = Infinity;
+  if (rtt <= App.bestRtt * 1.5 || !App.loaded || jumped) {
+    App.offset = candidate;
+    App.bestRtt = Math.min(App.bestRtt, rtt);
+  }
+}
+/** يعيد المحاولة مع تراجع أُسّي وعشوائية بسيطة لتوزيع الضغط */
+async function apiRetry(action, payload, attempts = 5, base = 500) {
+  let last;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const d = await api(action, payload);
+      if (d.ok || !d.retry) return d;
+      last = d;
+    } catch (e) { last = { ok: false, code: 'network', error: 'تعذّر الاتصال بالخادم' }; }
+    if (i < attempts - 1) await sleep(Math.min(base * 2 ** i, 6000) * (0.6 + Math.random() * 0.8));
+  }
+  return last;
+}
+
+/* =====================================================================
+   التحميل الأولي والتحديث
+   ===================================================================== */
+async function boot() {
+  if (IS_MOCK) { $('#testBanner').hidden = false; setupTestPanel(); }
+  setupHeader(); setupReveal(); setupDialogs();
+  renderVideo(); renderSocials(); renderRegistration(); renderSchedule(); renderWinners(); renderEvening();
+  setInterval(tick, 250);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && App.loaded) refreshState(); });
+  setInterval(() => { if (!document.hidden && App.loaded) refreshState(); }, 3 * 60 * 1000);
+  await loadInit();
+  registerSW();
+  if (ONESIGNAL_APP_ID && store.get('siraj_push') === 1 && 'Notification' in window && Notification.permission === 'granted') loadOneSignal();
+}
+
+async function loadInit() {
+  const d = await apiRetry('init', { pid: App.user && App.user.pid }, 6, 700);
+  if (!d || !d.ok) {
+    renderQError();
+    setTimeout(loadInit, 8000 + Math.random() * 4000);
+    return;
+  }
+  App.loaded = true;
+  App.settings = Object.assign({}, DEFAULTS, d.settings || {});
+  App.schedule = d.schedule || [];
+  App.winners = d.winners || [];
+  setState(d.state);
+  renderVideo(); renderSchedule(); renderWinners(); renderEvening(); renderSocials();
+}
+
+let refreshing = null;
+async function refreshState() {
+  if (refreshing) return refreshing;
+  refreshing = (async () => {
+    const d = await apiRetry('getState', { pid: App.user && App.user.pid }, 6, 500);
+    if (d && d.ok) {
+      const prevQ = App.state && App.state.questionId;
+      setState(d.state);
+      if (prevQ !== d.state.questionId || d.state.state === 'closed') {
+        // تحديث الجدول بعد انتهاء سؤال (علامة "انتهى")
+        App.schedule.forEach(x => { x.status = now() >= x.closeAt ? 'past' : (x.date === muscatDateStr(now()) ? 'today' : 'upcoming'); });
+        renderSchedule();
+      }
+    }
+  })().finally(() => { refreshing = null; });
+  return refreshing;
+}
+
+function setState(st) {
+  App.state = st || { state: 'ended' };
+  const local = store.get('siraj_answers') || {};
+  if (App.state.questionId && !App.state.myAnswer && local[App.state.questionId] && App.user && local[App.state.questionId].sid === App.user.studentId) {
+    App.state.myAnswer = { receivedAt: local[App.state.questionId].at };
+  }
+  renderQuestion();
+  renderHeroCountdown();
+  resumePending();
+}
+
+/* المؤقت: يحدّث العدادات ويعيد طلب الحالة عند كل نقطة تحول */
+function currentTarget() {
+  const s = App.state; if (!s) return null;
+  if (s.state === 'open' || (s.state === 'lecture' && s.phase === 'open')) return { at: s.closeAt, kind: 'close' };
+  if (s.state === 'lecture' && s.phase === 'before') return { at: s.openAt, kind: 'open' };
+  if (s.state === 'pending') return { at: now() + 20000, kind: 'poll' };
+  if (s.next) return { at: s.next.openAt, kind: 'open' };
+  return null;
+}
+let pendingPollAt = 0;
+function tick() {
+  const t = currentTarget();
+  $$('[data-cd]').forEach(el => updateCountdown(el, Number(el.dataset.cd)));
+  $$('[data-mmss]').forEach(el => { el.textContent = mmss(Number(el.dataset.mmss) - now()); });
+  if (!t || !App.loaded) return;
+  if (t.kind === 'poll') {
+    if (Date.now() > pendingPollAt) { pendingPollAt = Date.now() + 20000; refreshState(); }
+    return;
+  }
+  const key = t.kind + ':' + t.at;
+  if (now() >= t.at && !App.firedTargets.has(key)) {
+    App.firedTargets.add(key);
+    // توزيع بسيط للطلبات (أقل من ثانية) حتى لا تصل ألف ضغطة في نفس الملّي ثانية
+    setTimeout(refreshState, reduceMotion ? 0 : Math.random() * 700);
+    setTimeout(() => { const s = App.state; if (s && currentTarget() && currentTarget().at === t.at) refreshState(); }, 4000 + Math.random() * 2000);
+  }
+}
+function mmss(ms) {
+  ms = Math.max(0, ms);
+  const m = Math.floor(ms / 60000), s = Math.floor(ms % 60000 / 1000);
+  return `${pad2(m)}:${pad2(s)}`;
+}
+function countdownHtml(target, cls = '') {
+  return `<div class="countdown ${cls}" data-cd="${target}" role="timer" aria-label="العد التنازلي">
+    <div class="cd-unit"><span class="cd-num" data-u="d">00</span><span class="cd-txt">يوم</span></div>
+    <div class="cd-unit"><span class="cd-num" data-u="h">00</span><span class="cd-txt">ساعة</span></div>
+    <div class="cd-unit"><span class="cd-num" data-u="m">00</span><span class="cd-txt">دقيقة</span></div>
+    <div class="cd-unit"><span class="cd-num" data-u="s">00</span><span class="cd-txt">ثانية</span></div>
+  </div>`;
+}
+function updateCountdown(el, target) {
+  const ms = Math.max(0, target - now());
+  const v = { d: Math.floor(ms / DAY), h: Math.floor(ms % DAY / 3600000), m: Math.floor(ms % 3600000 / 60000), s: Math.floor(ms % 60000 / 1000) };
+  for (const k in v) { const n = el.querySelector(`[data-u="${k}"]`); const txt = pad2(v[k]); if (n && n.textContent !== txt) n.textContent = txt; }
+}
+
+/* =====================================================================
+   الواجهة: العدّاد الكبير
+   ===================================================================== */
+function renderHeroCountdown() {
+  const box = $('#heroCountdown'); const s = App.state;
+  if (!s) { box.innerHTML = ''; return; }
+  if (s.state === 'open' || (s.state === 'lecture' && s.phase === 'open')) {
+    box.innerHTML = `<p class="live-now"><span class="pulse"></span> ${s.state === 'lecture' ? 'باب الإجابة مفتوح لحضور المحاضرة' : 'السؤال مطروح الآن!'}</p>
+      <p class="countdown-note">يُغلق باب الإجابة بعد <b data-mmss="${s.closeAt}">--:--</b></p>
+      <div class="hero-ctas" style="justify-content:center;margin-top:16px"><a class="btn btn--yellow" href="#question">${s.myAnswer ? 'عرض حالة إجابتك' : 'أجب الآن'}</a></div>`;
+    return;
+  }
+  if (s.state === 'ended') {
+    box.innerHTML = `<p class="live-now">انتهت المسابقة.. انتظرونا في أمسية الفائزين</p>`;
+    return;
+  }
+  const target = s.state === 'lecture' ? s.openAt : (s.next && s.next.openAt);
+  if (!target) { box.innerHTML = ''; return; }
+  const nextDay = s.state === 'lecture' ? s.day : s.next;
+  box.innerHTML = `<p class="countdown-label"><span class="dot"></span> ${s.state === 'lecture' ? 'تفتح الإجابة في المحاضرة بعد' : 'موعد السؤال القادم بعد'}</p>
+    ${countdownHtml(target)}
+    <p class="countdown-note">${nextDay ? `السؤال ${nextDay.n} · ${esc(fmtDay(target))} · ${esc(fmtTime(target))}` : ''}</p>`;
+  updateCountdown($('[data-cd]', box), target);
+}
+
+/* =====================================================================
+   منطقة السؤال (الحالة الذكية)
+   ===================================================================== */
+function typeChip(d) {
+  if (!d) return '';
+  if (d.type === 'lecture') return `<span class="chip chip--yellow">${icon('i-mic')} يوم محاضرة</span>`;
+  if (d.type === 'themed') return `<span class="chip">${icon('i-star')} يوم موضوعي${d.theme ? ': ' + esc(d.theme) : ''}</span>`;
+  return `<span class="chip">سؤال يومي</span>`;
+}
+function setQ(html) {
+  const c = $('#qcard'); c.innerHTML = html;
+  if (!reduceMotion) { c.classList.remove('fade-swap'); void c.offsetWidth; c.classList.add('fade-swap'); }
+  $$('[data-cd]', c).forEach(el => updateCountdown(el, Number(el.dataset.cd)));
+  $$('[data-mmss]', c).forEach(el => { el.textContent = mmss(Number(el.dataset.mmss) - now()); });
+}
+function renderQError() {
+  setQ(`<div class="qstate">${lampSvg()}<h3 class="qtitle">نحاول الاتصال بالخادم…</h3>
+    <p class="qsub">قد يكون الضغط عالياً الآن. نعيد المحاولة تلقائياً خلال ثوانٍ.</p>
+    <div class="qactions"><button class="btn" type="button" onclick="loadInit()">إعادة المحاولة الآن</button></div></div>`);
+}
+const registerPrompt = () => App.user ? '' :
+  `<div class="alert alert--info" style="width:100%;max-width:520px">لم تسجّل بعد. سجّل الآن لتتمكن من الإجابة. <a href="#register" style="font-weight:700">سجّل من هنا</a></div>`;
+
+function renderQuestion() {
+  const s = App.state; if (!s) return;
+  const pending = store.get('siraj_pending');
+  if (pending && pending.qid === s.questionId && (s.state === 'open' || s.state === 'lecture') && !s.myAnswer) return renderSending(pending);
+
+  if ((s.state === 'open' || (s.state === 'lecture' && s.phase === 'open')) && s.myAnswer) return renderSubmitted();
+
+  switch (s.state) {
+    case 'before': {
+      const nx = s.next;
+      return setQ(`<div class="qstate">
+        ${lampSvg()}
+        <div class="qhead" style="justify-content:center">${s.beforeStart ? '<span class="chip chip--yellow">قريباً</span>' : `<span class="chip">السؤال ${nx ? nx.n : ''}</span>`}${typeChip(nx)}</div>
+        <h3 class="qtitle">${s.beforeStart ? 'المسابقة تبدأ قريباً' : 'السؤال القادم'}</h3>
+        <p class="qsub">${nx ? `يُطرح ${esc(fmtDay(nx.openAt))} الساعة ${esc(fmtTime(nx.openAt))} بتوقيت مسقط.` : ''} جهّز نفسك، أسرع إجابة صحيحة تفوز.</p>
+        ${nx ? countdownHtml(nx.openAt, 'countdown--light countdown--sm') : ''}
+        <div class="qactions">
+          <button class="btn btn--yellow" type="button" data-open-reminder>${icon('i-bell')} ذكّرني</button>
+          ${App.user ? '' : '<a class="btn btn--outline" href="#register">سجّل الآن لتكون جاهزاً</a>'}
+        </div></div>`);
+    }
+    case 'open': return renderOpen();
+    case 'lecture': return renderLecture();
+    case 'pending':
+      return setQ(`<div class="qstate">${lampSvg()}<h3 class="qtitle">السؤال في الطريق…</h3><p class="qsub">نجهّز سؤال اليوم، ستظهر الصفحة تلقائياً خلال لحظات.</p></div>`);
+    case 'closed': {
+      const nx = s.next;
+      return setQ(`<div class="qstate">${lampSvg()}
+        <h3 class="qtitle">انتهى وقت الإجابة لسؤال اليوم</h3>
+        ${s.myAnswer ? `<p class="alert alert--ok">تم استلام إجابتك الساعة <span class="stamp" style="font-size:1rem">${fmtStamp(s.myAnswer.receivedAt)}</span></p>` : ''}
+        <p class="qsub">${nx ? `السؤال القادم ${esc(fmtDay(nx.openAt))} الساعة ${esc(fmtTime(nx.openAt))}.` : 'كان هذا آخر أسئلة المسابقة.'} يُعلن الفائز بعد اعتماد اللجنة الثقافية.</p>
+        ${nx ? countdownHtml(nx.openAt, 'countdown--light countdown--sm') : ''}
+        <div class="qactions"><a class="btn btn--outline" href="#winners">الفائزون</a><button class="btn" type="button" data-open-reminder>${icon('i-bell')} ذكّرني</button></div></div>`);
+    }
+    case 'off': {
+      const nx = s.next;
+      return setQ(`<div class="qstate">${lampSvg()}
+        <h3 class="qtitle">لا سؤال اليوم، نلقاك الأحد</h3>
+        <p class="qsub">الأسئلة من الأحد إلى الأربعاء الساعة 7:00 مساءً. ${nx ? `السؤال القادم رقم ${nx.n} ${esc(fmtDay(nx.openAt))}.` : ''}</p>
+        ${nx ? countdownHtml(nx.openAt, 'countdown--light countdown--sm') : ''}
+        <div class="qactions"><button class="btn btn--yellow" type="button" data-open-reminder>${icon('i-bell')} ذكّرني</button></div></div>`);
+    }
+    case 'ended':
+    default:
+      return setQ(`<div class="qstate">${lampSvg()}
+        <h3 class="qtitle">انتهت المسابقة، انتظرونا في أمسية الفائزين</h3>
+        <p class="qsub">شكراً لكل من شارك وأضاء معنا ستة عشر يوماً من المعرفة.</p>
+        <div class="qactions"><a class="btn btn--yellow" href="#evening">أمسية الفائزين</a><a class="btn btn--outline" href="#winners">الفائزون</a></div></div>`);
+  }
+}
+
+function answerFormHtml(answerType, options, idPrefix) {
+  const field = answerType === 'mcq'
+    ? `<fieldset class="options" style="border:0;padding:0;margin:0"><legend class="sr-only">اختر إجابة</legend>
+        ${options.map((o, i) => `<div class="option"><input type="radio" name="answer" id="${idPrefix}${i}" value="${esc(o)}" required><label for="${idPrefix}${i}">${esc(o)}</label></div>`).join('')}
+      </fieldset>`
+    : `<div class="field"><label for="${idPrefix}txt">إجابتك</label>
+        <input class="input" id="${idPrefix}txt" name="answer" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="اكتب إجابتك هنا" required></div>`;
+  return `<form class="answer-form" id="answerForm" novalidate>
+      ${field}
+      <p class="one-shot">${icon('i-warn')} <span>لديك إجابة واحدة فقط لهذا السؤال برقمك الجامعي ولا يمكن تعديلها.</span></p>
+      <div class="field-error" id="answerErr" role="alert"></div>
+      <button class="btn btn--yellow btn--block" type="submit" ${App.user ? '' : 'disabled'}>${icon('i-bolt')} إرسال الإجابة</button>
+    </form>`;
+}
+
+function renderOpen() {
+  const s = App.state; const q = s.question;
+  setQ(`<div class="qhead"><span class="chip">السؤال ${s.day ? s.day.n : ''} من ${App.schedule.length || 16}</span>${typeChip(s.day)}</div>
+    <div class="closing-bar"><span>يُغلق باب الإجابة بعد</span><b data-mmss="${s.closeAt}">--:--</b></div>
+    <p class="qtext">${esc(q.text)}</p>
+    ${registerPrompt()}
+    ${answerFormHtml(q.answerType, q.options || [], 'opt')}`);
+  bindAnswerForm(q.id, null);
+}
+
+function renderLecture() {
+  const s = App.state; const L = s.lecture || {};
+  const infoList = `<div class="info-list">
+      <div class="info-item">${icon('i-mic')}<span><small>المحاضرة</small><b>${esc(L.title || 'تُعلن قريباً')}</b></span></div>
+      <div class="info-item">${icon('i-pin')}<span><small>المكان</small><b>${esc(L.location || 'يُعلن قريباً')}</b></span></div>
+      <div class="info-item">${icon('i-clock')}<span><small>الوقت</small><b>${esc(fmtTime(s.openAt))} · ${esc(fmtDay(s.openAt))}</b></span></div>
+    </div>`;
+  const head = `<div class="qhead" style="justify-content:center"><span class="chip">السؤال ${s.day ? s.day.n : ''}</span>${typeChip(s.day)}</div>
+    <h3 class="qtitle">سؤال اليوم يُطرح حصرياً في المحاضرة</h3>
+    <p class="qsub">احضر المحاضرة لتسمع السؤال وتحصل على «رمز المحاضرة» الذي يفتح لك نموذج الإجابة.</p>`;
+
+  if (s.phase === 'before') {
+    return setQ(`<div class="qstate">${lampSvg()}${head}${infoList}
+      <p class="qsub" style="font-weight:500">يُفتح إدخال الرمز عند بدء المحاضرة بعد:</p>
+      ${countdownHtml(s.openAt, 'countdown--light countdown--sm')}
+      <div class="qactions"><button class="btn btn--yellow" type="button" data-open-reminder>${icon('i-bell')} ذكّرني</button></div></div>`);
+  }
+
+  // phase open
+  const unlocked = App.lecture && App.lecture.qid === s.questionId ? App.lecture : restoreLecture(s.questionId);
+  if (unlocked) {
+    setQ(`<div class="qhead"><span class="chip">السؤال ${s.day ? s.day.n : ''}</span>${typeChip(s.day)}<span class="chip chip--yellow">${icon('i-check')} تم التحقق من الرمز</span></div>
+      <div class="closing-bar"><span>يُغلق باب الإجابة بعد</span><b data-mmss="${s.closeAt}">--:--</b></div>
+      <p class="qtext" style="font-size:clamp(1.25rem,4.4vw,1.8rem)">أجب عن السؤال الذي طُرح في المحاضرة</p>
+      ${answerFormHtml(unlocked.answerType, unlocked.options || [], 'lopt')}`);
+    bindAnswerForm(s.questionId, unlocked.code);
+    return;
+  }
+  setQ(`<div class="qstate">${head}${infoList}
+    <div class="closing-bar" style="width:100%;max-width:520px"><span>يُغلق باب الإجابة بعد</span><b data-mmss="${s.closeAt}">--:--</b></div>
+    ${registerPrompt()}
+    <form id="codeForm" class="answer-form" style="width:100%;max-width:520px;text-align:start" novalidate>
+      <div class="field"><label for="lecCode">رمز المحاضرة</label>
+        <input class="input" id="lecCode" maxlength="40" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="اكتب الرمز الذي أُعلن في المحاضرة" required></div>
+      <div class="field-error" id="codeErr" role="alert"></div>
+      <button class="btn btn--block" type="submit" ${App.user ? '' : 'disabled'}>${icon('i-key')} افتح نموذج الإجابة</button>
+    </form></div>`);
+  $('#codeForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const code = $('#lecCode').value.trim(); const err = $('#codeErr'); const btn = e.target.querySelector('button');
+    if (!code) { err.textContent = 'اكتب رمز المحاضرة'; return; }
+    btn.disabled = true; err.textContent = '';
+    const d = await apiRetry('verifyLectureCode', { pid: App.user.pid, code }, 4, 600);
+    btn.disabled = false;
+    if (d && d.ok) {
+      App.lecture = { qid: d.questionId, code, answerType: d.answerType, options: d.options };
+      try { sessionStorage.setItem('siraj_lecture', JSON.stringify(App.lecture)); } catch (x) { }
+      renderLecture();
+    } else {
+      err.textContent = (d && d.error) || 'تعذّر التحقق، حاول مرة أخرى';
+    }
+  });
+}
+function restoreLecture(qid) {
+  try { const l = JSON.parse(sessionStorage.getItem('siraj_lecture')); if (l && l.qid === qid) { App.lecture = l; return l; } } catch (e) { }
+  return null;
+}
+
+function bindAnswerForm(qid, lectureCode) {
+  const form = $('#answerForm'); if (!form) return;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const err = $('#answerErr'); err.textContent = '';
+    if (!App.user) { err.textContent = 'سجّل أولاً لتتمكن من الإجابة'; location.hash = '#register'; return; }
+    const checked = form.querySelector('input[name="answer"]:checked');
+    const txt = form.querySelector('input.input[name="answer"]');
+    const answer = (checked ? checked.value : (txt ? txt.value : '')).trim();
+    if (!answer) { err.textContent = 'اختر أو اكتب إجابتك أولاً'; return; }
+    if (answer.length > 200) { err.textContent = 'الإجابة أطول من المسموح'; return; }
+    $('#cfAnswer').textContent = answer;
+    const dlg = $('#confirmDlg');
+    $('#cfSend').onclick = () => { dlg.close(); submitAnswer(qid, answer, lectureCode); };
+    dlg.showModal();
+  });
+}
+
+/* إرسال الإجابة: مرة واحدة، مع إعادة محاولة تحفظ وقت الوصول الأصلي */
+async function submitAnswer(qid, answer, lectureCode, resumeToken) {
+  if (App.submitting) return;
+  App.submitting = true;
+  const pending = { qid, answer, code: lectureCode || '', token: resumeToken || '', sid: App.user.studentId, startedAt: Date.now() };
+  store.set('siraj_pending', pending);
+  renderSending(pending);
+  try {
+    for (let attempt = 0; attempt < 40; attempt++) {
+      let d;
+      try {
+        d = await api('submitAnswer', { pid: App.user.pid, questionId: qid, answer, lectureCode: lectureCode || '', token: pending.token || '' });
+      } catch (e) {
+        d = { ok: false, retry: true, code: 'network' };
+      }
+      if (d.ok) {
+        const answers = store.get('siraj_answers') || {};
+        answers[qid] = { at: d.receivedAt, sid: App.user.studentId };
+        store.set('siraj_answers', answers);
+        store.del('siraj_pending');
+        App.state.myAnswer = { receivedAt: d.receivedAt };
+        renderSubmitted(d.duplicate);
+        renderHeroCountdown();
+        if (!d.duplicate) toast('تم استلام إجابتك ✅');
+        return;
+      }
+      if (d.token) { pending.token = d.token; store.set('siraj_pending', pending); }
+      if (!d.retry) {
+        store.del('siraj_pending');
+        renderQuestion();
+        const err = $('#answerErr') || $('#codeErr');
+        if (err) err.textContent = d.error || 'تعذّر إرسال الإجابة';
+        else toast(d.error || 'تعذّر إرسال الإجابة');
+        if (d.code === 'wrong_code') { App.lecture = null; try { sessionStorage.removeItem('siraj_lecture'); } catch (x) { } renderQuestion(); }
+        if (d.code === 'closed' || d.code === 'no_question') refreshState();
+        return;
+      }
+      renderSending(pending, attempt + 1);
+      await sleep(Math.min(700 * 1.6 ** attempt, 7000) * (0.6 + Math.random() * 0.8));
+    }
+    toast('لم نتمكن من الإرسال بعد عدة محاولات. سنعيد المحاولة عند تحديث الصفحة.');
+  } finally {
+    App.submitting = false;
+  }
+}
+function renderSending(p, attempt = 0) {
+  setQ(`<div class="qstate">${lampSvg()}
+    <h3 class="qtitle">جارٍ إرسال إجابتك…</h3>
+    <p class="qsub">${p.token ? 'الضغط عالٍ الآن، لكن <b>وقت وصول إجابتك محفوظ على الخادم</b> وترتيبك لن يتأثر. لا تغلق الصفحة.' : 'لحظات من فضلك، لا تغلق الصفحة.'}</p>
+    ${attempt > 1 ? `<p class="chip">محاولة ${attempt}</p>` : ''}
+    <div class="skeleton" style="width:60%;max-width:300px"></div></div>`);
+}
+function resumePending() {
+  const p = store.get('siraj_pending'); const s = App.state;
+  if (!p || !App.user || App.submitting) return;
+  if (p.sid !== App.user.studentId || p.qid !== s.questionId || s.myAnswer) { if (p.qid !== s.questionId || s.myAnswer) store.del('siraj_pending'); return; }
+  if (s.state === 'open' || (s.state === 'lecture' && s.phase === 'open')) submitAnswer(p.qid, p.answer, p.code, p.token);
+}
+function renderSubmitted(dup) {
+  const s = App.state;
+  const nx = s.next || null;
+  setQ(`<div class="qstate">
+    <div class="success-mark">${icon('i-check')}</div>
+    <h3 class="qtitle">تم استلام إجابتك</h3>
+    <p class="qsub">${dup ? 'إجابتك على هذا السؤال مسجّلة مسبقاً، ولا يُقبل أكثر من إجابة واحدة لكل رقم جامعي.' : 'سجّلنا إجابتك بوقت الخادم. لا تُكشف صحة الإجابات، ويُعلن الفائز بعد اعتماد اللجنة الثقافية.'}</p>
+    <div><small class="qsub" style="font-size:.9rem">وقت الاستلام (بتوقيت مسقط)</small><div class="stamp">${fmtStamp(s.myAnswer.receivedAt)}</div></div>
+    <div class="qactions"><button class="btn btn--outline" type="button" data-open-reminder>${icon('i-bell')} ذكّرني بالسؤال القادم</button><a class="btn" href="#photo">${icon('i-camera')} تحدي التصوير</a></div>
+  </div>`);
+}
+
+/* =====================================================================
+   التسجيل واستعادة الحساب
+   ===================================================================== */
+function renderRegistration() {
+  const card = $('#regCard');
+  $$('[data-cta-register]').forEach(a => {
+    a.textContent = App.user ? 'أنت مسجّل ✓' : 'سجّل الآن';
+    a.setAttribute('href', App.user ? '#question' : '#register');
+  });
+  if (App.user) {
+    const first = (App.user.name || '').split(' ')[0];
+    card.innerHTML = `<div class="me-card">
+      <div class="me-avatar" aria-hidden="true">${esc(first.charAt(0))}</div>
+      <p class="me-name">أهلاً ${esc(first)}</p>
+      <p class="qsub">أنت مسجّل في مسابقة سراج الثقافية على هذا الجهاز.</p>
+      <div class="me-meta"><span class="chip">الرقم الجامعي: ${esc(App.user.studentId)}</span><span class="chip">${App.user.gender === 'female' ? 'طالبة' : 'طالب'}</span></div>
+      <div class="qactions"><a class="btn btn--yellow" href="#question">اذهب إلى سؤال اليوم</a><button class="btn btn--outline" type="button" data-open-reminder>${icon('i-bell')} فعّل التذكير</button></div>
+      <button class="link-btn" type="button" id="logoutBtn">لست ${esc(first)}؟ سجّل الخروج من هذا الجهاز</button>
+    </div>`;
+    $('#logoutBtn').onclick = () => {
+      if (!confirm('سيُزال تسجيلك من هذا الجهاز فقط، ويمكنك استعادته برقمك الجامعي وهاتفك. متابعة؟')) return;
+      store.del('siraj_user'); store.del('siraj_pending'); App.user = null; App.lecture = null;
+      try { sessionStorage.removeItem('siraj_lecture'); } catch (e) { }
+      if (App.state) delete App.state.myAnswer;
+      renderRegistration(); renderQuestion();
+    };
+    return;
+  }
+  if (App.regMode === 'recover') return renderRecover();
+  card.innerHTML = `<h3 style="font-size:1.6rem;margin-bottom:6px">بيانات التسجيل</h3>
+    <p class="qsub" style="margin-bottom:22px;font-size:.98rem">تُستخدم بياناتك للتواصل مع الفائزين فقط.</p>
+    <form id="regForm" class="form-grid" novalidate>
+      <div class="field"><label for="rName">الاسم الثلاثي</label>
+        <input class="input" id="rName" name="name" autocomplete="name" maxlength="80" placeholder="مثال: أحمد سالم البلوشي" required>
+        <div class="field-error" data-err="name"></div></div>
+      <div class="form-grid form-grid--2">
+        <div class="field"><label for="rSid">الرقم الجامعي</label>
+          <input class="input input--ltr" id="rSid" name="studentId" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="مثال: 135790" required>
+          <div class="field-error" data-err="studentId"></div></div>
+        <div class="field"><label for="rPhone">رقم الهاتف</label>
+          <input class="input input--ltr" id="rPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="9XXXXXXX" required>
+          <div class="field-error" data-err="phone"></div></div>
+      </div>
+      <div class="field"><label for="rEmail">البريد الجامعي</label>
+        <input class="input input--ltr" id="rEmail" name="email" type="email" inputmode="email" autocomplete="email" maxlength="100" placeholder="s135790@student.squ.edu.om" required>
+        <div class="field-error" data-err="email"></div></div>
+      <div class="field"><span class="label" id="gLbl">الفئة</span>
+        <div class="segmented" role="radiogroup" aria-labelledby="gLbl">
+          <input type="radio" name="gender" id="gM" value="male"><label for="gM">طالب</label>
+          <input type="radio" name="gender" id="gF" value="female"><label for="gF">طالبة</label>
+        </div>
+        <div class="field-error" data-err="gender"></div></div>
+      <div class="field-error" data-err="form" role="alert"></div>
+      <div class="form-foot">
+        <button class="btn btn--yellow btn--block" type="submit">سجّل في المسابقة</button>
+        <p class="form-switch">سجّلت من جهاز آخر؟ <button class="link-btn" type="button" id="toRecover">استعد حسابك</button></p>
+      </div>
+    </form>`;
+  $('#toRecover').onclick = () => { App.regMode = 'recover'; renderRegistration(); $('#rcSid') && $('#rcSid').focus(); };
+  $('#regForm').addEventListener('submit', onRegister);
+}
+function setErr(form, field, msg) {
+  const el = form.querySelector(`[data-err="${field}"]`); if (el) el.textContent = msg || '';
+  const input = form.querySelector(`[name="${field}"]`); if (input && input.type !== 'radio') input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+}
+function validateReg(v) {
+  const e = {};
+  const name = v.name.replace(/\s+/g, ' ').trim();
+  if (name.split(' ').filter(w => w.length >= 2).length < 3 || name.length > 80) e.name = 'اكتب اسمك الثلاثي (ثلاثة أسماء على الأقل)';
+  else if (!/^[\u0600-\u06FFa-zA-Z\s'\-]+$/.test(name)) e.name = 'الاسم يجب أن يحتوي على حروف فقط';
+  if (!/^\d{5,10}$/.test(toLatinDigits(v.studentId).replace(/\s/g, ''))) e.studentId = 'الرقم الجامعي أرقام فقط (5 إلى 10 أرقام)';
+  if (!/^[79]\d{7}$/.test(normalizePhone(v.phone))) e.phone = 'رقم عُماني من 8 أرقام يبدأ بـ 7 أو 9';
+  const dom = (App.settings.emailDomain || 'squ.edu.om').toLowerCase();
+  const em = v.email.trim().toLowerCase(); const host = em.split('@')[1] || '';
+  if (!/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(em)) e.email = 'البريد الإلكتروني غير صحيح';
+  else if (host !== dom && !host.endsWith('.' + dom)) e.email = `استخدم بريدك الجامعي (@${dom})`;
+  if (v.gender !== 'male' && v.gender !== 'female') e.gender = 'اختر: طالب أو طالبة';
+  return e;
+}
+async function onRegister(ev) {
+  ev.preventDefault();
+  const f = ev.target; const btn = f.querySelector('button[type="submit"]');
+  const v = { name: f.name.value, studentId: f.studentId.value, phone: f.phone.value, email: f.email.value, gender: (f.querySelector('input[name="gender"]:checked') || {}).value };
+  ['name', 'studentId', 'phone', 'email', 'gender', 'form'].forEach(k => setErr(f, k, ''));
+  const errs = validateReg(v);
+  if (Object.keys(errs).length) { Object.entries(errs).forEach(([k, m]) => setErr(f, k, m)); const first = f.querySelector('[aria-invalid="true"]'); first && first.focus(); return; }
+  btn.disabled = true; btn.textContent = 'جارٍ التسجيل…';
+  const d = await apiRetry('register', {
+    name: v.name.replace(/\s+/g, ' ').trim(), studentId: toLatinDigits(v.studentId).replace(/\s/g, ''),
+    phone: normalizePhone(v.phone), email: v.email.trim().toLowerCase(), gender: v.gender
+  }, 5, 700);
+  btn.disabled = false; btn.textContent = 'سجّل في المسابقة';
+  if (d && d.ok) return onLoggedIn(d.participant, d.recovered ? 'تم استرجاع حسابك ✅' : 'تم تسجيلك بنجاح ✅');
+  if (d && d.code === 'exists') {
+    App.regMode = 'recover'; renderRegistration();
+    $('#rcSid').value = toLatinDigits(v.studentId); $('#rcPhone').value = v.phone;
+    setErr($('#rcForm'), 'form', d.error); return;
+  }
+  setErr(f, d && d.field ? d.field : 'form', (d && d.error) || 'تعذّر التسجيل، حاول مرة أخرى');
+}
+function renderRecover() {
+  const card = $('#regCard');
+  card.innerHTML = `<h3 style="font-size:1.6rem;margin-bottom:6px">استعادة الحساب</h3>
+    <p class="qsub" style="margin-bottom:22px;font-size:.98rem">اكتب رقمك الجامعي ورقم الهاتف الذي سجّلت به.</p>
+    <form id="rcForm" class="form-grid" novalidate>
+      <div class="field"><label for="rcSid">الرقم الجامعي</label>
+        <input class="input input--ltr" id="rcSid" name="studentId" inputmode="numeric" maxlength="10" required><div class="field-error" data-err="studentId"></div></div>
+      <div class="field"><label for="rcPhone">رقم الهاتف المسجّل</label>
+        <input class="input input--ltr" id="rcPhone" name="phone" type="tel" inputmode="tel" maxlength="16" required><div class="field-error" data-err="phone"></div></div>
+      <div class="field-error" data-err="form" role="alert"></div>
+      <div class="form-foot">
+        <button class="btn btn--block" type="submit">استعد حسابي</button>
+        <p class="form-switch">مشارك جديد؟ <button class="link-btn" type="button" id="toReg">سجّل الآن</button></p>
+      </div>
+    </form>`;
+  $('#toReg').onclick = () => { App.regMode = 'register'; renderRegistration(); };
+  $('#rcForm').addEventListener('submit', async ev => {
+    ev.preventDefault();
+    const f = ev.target; const btn = f.querySelector('button[type="submit"]');
+    ['studentId', 'phone', 'form'].forEach(k => setErr(f, k, ''));
+    const sid = toLatinDigits(f.studentId.value).replace(/\s/g, ''); const phone = normalizePhone(f.phone.value);
+    if (!/^\d{5,10}$/.test(sid)) return setErr(f, 'studentId', 'الرقم الجامعي غير صحيح');
+    if (!/^[79]\d{7}$/.test(phone)) return setErr(f, 'phone', 'رقم الهاتف غير صحيح');
+    btn.disabled = true;
+    const d = await apiRetry('recover', { studentId: sid, phone }, 4, 700);
+    btn.disabled = false;
+    if (d && d.ok) return onLoggedIn(d.participant, 'تم استرجاع حسابك ✅');
+    setErr(f, d && d.field ? d.field : 'form', (d && d.error) || 'تعذّرت الاستعادة');
+  });
+}
+function onLoggedIn(p, msg) {
+  App.user = p; store.set('siraj_user', p); App.regMode = 'me';
+  renderRegistration(); toast(msg);
+  refreshState();
+  if (window.OneSignal && OneSignal.login) { try { OneSignal.login(p.pid); } catch (e) { } }
+}
+
+/* =====================================================================
+   الفيديو
+   ===================================================================== */
+function renderVideo() {
+  const box = $('#videoCard');
+  const url = (App.settings.videoUrl || VIDEO_URL || '').trim();
+  if (box.dataset.src === url && box.innerHTML) return;
+  box.dataset.src = url;
+  const yt = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/))([\w-]{11})/);
+  if (yt) {
+    const id = yt[1];
+    box.innerHTML = `<button class="video-facade" type="button" aria-label="تشغيل الفيديو التعريفي">
+      <img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><span class="play">${icon('i-play')}</span></button>`;
+    $('.video-facade', box).onclick = () => {
+      box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" title="الفيديو التعريفي بمجموعة سراج" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    };
+  } else if (/\.(mp4|webm|mov)(\?|#|$)/i.test(url)) {
+    box.innerHTML = `<video src="${esc(url)}" controls playsinline preload="metadata" poster="assets/og-image.jpg"></video>`;
+  } else {
+    box.innerHTML = `<div class="video-empty"><div>${lampSvg('#fff')}<p>الفيديو التعريفي بمجموعة سراج<br>قريباً</p></div></div>`;
+  }
+}
+
+/* =====================================================================
+   الجدول (التقويم)
+   ===================================================================== */
+function fallbackSchedule() {
+  const s = App.settings; const out = []; let n = 0;
+  for (let t = muscatMs(s.startDate); t <= muscatMs(s.endDate); t += DAY) {
+    const dow = muscatDow(t);
+    if (dow <= 3) {
+      n++; const date = muscatDateStr(t); const openAt = muscatMs(date, s.questionTime);
+      out.push({ n, date, dow, openAt, closeAt: openAt + s.answerWindowMinutes * 60000, type: 'daily', status: now() >= openAt + s.answerWindowMinutes * 60000 ? 'past' : (date === muscatDateStr(now()) ? 'today' : 'upcoming') });
+    }
+  }
+  return out;
+}
+function renderSchedule() {
+  const days = App.schedule.length ? App.schedule : fallbackSchedule();
+  const cal = $('#cal');
+  const byDate = Object.fromEntries(days.map(d => [d.date, d]));
+  const first = muscatMs(days[0].date), last = muscatMs(days[days.length - 1].date);
+  const start = first - muscatDow(first) * DAY;
+  const end = last + (6 - muscatDow(last)) * DAY;
+  const today = muscatDateStr(now());
+  const dows = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+  let html = dows.map((d, i) => `<div class="cal-dow${i > 3 ? ' off' : ''}" role="columnheader"><span aria-hidden="true">${window.innerWidth < 480 ? ['أحد', 'إثنين', 'ثلاثاء', 'أربعاء', 'خميس', 'جمعة', 'سبت'][i] : d}</span><span class="sr-only">${d}</span></div>`).join('');
+  let prevMonth = '';
+  for (let t = start; t <= end; t += DAY) {
+    const date = muscatDateStr(t); const d = byDate[date];
+    const dnum = Number(date.slice(8)); const month = F_MONTH.format(t);
+    const showMonth = month !== prevMonth; prevMonth = month;
+    const isToday = date === today;
+    if (d) {
+      const cls = ['cal-cell', 'q', d.type === 'lecture' ? 'lecture' : '', d.type === 'themed' ? 'themed' : '', d.status === 'past' ? 'past' : '', isToday ? 'today' : '', App.selectedDay === date ? 'selected' : ''].join(' ');
+      const badge = d.type === 'lecture' ? icon('i-mic', 'badge') : d.type === 'themed' ? icon('i-star', 'badge') : '';
+      html += `<button type="button" class="${cls}" data-date="${date}" role="gridcell" aria-label="السؤال ${d.n}، ${esc(fmtDay(d.openAt))}${d.type === 'lecture' ? '، يوم محاضرة' : d.type === 'themed' ? '، يوم موضوعي' : ''}${d.status === 'past' ? '، انتهى' : ''}${isToday ? '، اليوم' : ''}">
+        ${d.status === 'past' ? '' : badge}<span class="d">${dnum}</span>${showMonth ? `<span class="m">${esc(month)}</span>` : ''}<span class="qn">س ${d.n}</span></button>`;
+    } else {
+      html += `<div class="cal-cell off${isToday ? ' today' : ''}" role="gridcell" aria-label="${esc(fmtDay(t))}، لا سؤال"><span class="d">${dnum}</span>${showMonth ? `<span class="m">${esc(month)}</span>` : ''}</div>`;
+    }
+  }
+  cal.innerHTML = html;
+  $$('.cal-cell.q', cal).forEach(b => b.addEventListener('click', () => selectDay(b.dataset.date)));
+  $('#calRange').textContent = `${F_DAYM.format(days[0].openAt)} – ${F_DAYM.format(days[days.length - 1].openAt)} ${new Date(days[0].openAt).getUTCFullYear()}`;
+
+  const specials = days.filter(d => d.type === 'lecture' || d.type === 'themed');
+  $('#specialList').innerHTML = specials.map(d => `<div class="special ${d.type}">
+      <span class="ic">${icon(d.type === 'lecture' ? 'i-mic' : 'i-star')}</span>
+      <span><b>${d.type === 'lecture' ? esc(d.lectureTitle || 'يوم محاضرة') : 'يوم موضوعي: ' + esc(d.theme || '')}</b>
+      <small>السؤال ${d.n} · ${esc(fmtDay(d.openAt))}${d.type === 'lecture' && d.lectureLocation ? ' · ' + esc(d.lectureLocation) : ''}</small></span></div>`).join('');
+  if (!App.selectedDay) {
+    const todayDay = days.find(d => d.date === today) || days.find(d => d.status !== 'past');
+    if (todayDay) selectDay(todayDay.date, true);
+  } else selectDay(App.selectedDay, true);
+}
+function selectDay(date, silent) {
+  const days = App.schedule.length ? App.schedule : fallbackSchedule();
+  const d = days.find(x => x.date === date); if (!d) return;
+  App.selectedDay = date;
+  $$('.cal-cell.selected').forEach(c => c.classList.remove('selected'));
+  const cell = $(`.cal-cell[data-date="${date}"]`); if (cell) cell.classList.add('selected');
+  let extra = 'سؤال يومي.';
+  if (d.type === 'lecture') extra = `يوم محاضرة: ${esc(d.lectureTitle || 'تُعلن قريباً')}${d.lectureLocation ? ' — ' + esc(d.lectureLocation) : ''}. السؤال يُطرح حصرياً في المحاضرة.`;
+  if (d.type === 'themed') extra = `يوم موضوعي${d.theme ? ': ' + esc(d.theme) : ''}.`;
+  const status = d.status === 'past' ? 'انتهى' : (d.date === muscatDateStr(now()) ? 'اليوم' : 'قادم');
+  $('#calDetail').innerHTML = `${lampSvg()}<div><b>السؤال ${d.n} · ${esc(fmtDay(d.openAt))} · ${esc(fmtTime(d.openAt))}</b><p>${extra} <span class="chip" style="margin-inline-start:6px;padding:2px 10px">${status}</span></p></div>`;
+}
+
+/* =====================================================================
+   الفائزون والأمسية والروابط
+   ===================================================================== */
+function renderWinners() {
+  const box = $('#winnersList');
+  if (!App.winners.length) {
+    box.innerHTML = `<div class="empty">${lampSvg()}<h3 style="font-size:1.35rem">لم يُعلن أي فائز بعد</h3>
+      <p>تظهر هنا بطاقة لكل سؤال منتهٍ فيها اسم الفائز، بعد اعتماد اللجنة الثقافية.</p></div>`;
+    return;
+  }
+  box.innerHTML = `<div class="winners-grid">${App.winners.map(w => {
+    const ms = w.date ? muscatMs(w.date, App.settings.questionTime || '19:00') : null;
+    return `<article class="winner"><div class="winner-top"><span class="winner-n">السؤال ${w.n || ''}</span><span class="winner-date">${ms ? esc(fmtDay(ms)) : ''}</span></div>
+      <p class="winner-name">${esc(w.name)}</p>
+      <div class="winner-tag"><span class="chip chip--yellow">${icon('i-star')} ${w.gender === 'female' ? 'الفائزة' : 'الفائز'}</span></div></article>`;
+  }).join('')}</div>`;
+}
+function renderEvening() {
+  const fe = App.settings.finalEvening; const box = $('#eveningDate');
+  if (fe && fe.at) box.innerHTML = `<small>موعد الأمسية</small><b>${esc(F_DAYFULL.format(fe.at))}</b><small>${fe.time ? esc(fmtTime(fe.at)) : ''}${fe.location ? ' · ' + esc(fe.location) : ''}</small>`;
+  else if (fe && fe.text) box.innerHTML = `<small>موعد الأمسية</small><b>${esc(fe.text)}</b>${fe.location ? `<small>${esc(fe.location)}</small>` : ''}`;
+  else box.innerHTML = `<small>موعد الأمسية</small><b>يُعلن قريباً</b>`;
+}
+function renderSocials() {
+  const insta = App.settings.instagramUrl || SOCIAL.instagram;
+  $('#instaBtn').href = insta;
+  const items = [
+    insta && { href: insta, icon: 'i-insta', label: 'إنستغرام' },
+    SOCIAL.x && { href: SOCIAL.x, icon: 'i-x', label: 'إكس' },
+    SOCIAL.whatsapp && { href: SOCIAL.whatsapp, icon: 'i-whatsapp', label: 'واتساب' },
+    SOCIAL.email && { href: 'mailto:' + SOCIAL.email, icon: 'i-mail', label: 'البريد الإلكتروني' }
+  ].filter(Boolean);
+  $('#socials').innerHTML = items.map(i => `<a class="social" href="${esc(i.href)}" target="_blank" rel="noopener" aria-label="${i.label}">${icon(i.icon)}</a>`).join('');
+}
+
+/* =====================================================================
+   التذكير: ملف .ics وإشعارات OneSignal
+   ===================================================================== */
+function icsDate(ms) { return new Date(ms).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); }
+function icsEscape(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n'); }
+function icsFold(line) {
+  const enc = new TextEncoder(); const out = []; let cur = ''; let bytes = 0;
+  for (const ch of line) {
+    const b = enc.encode(ch).length;
+    if (bytes + b > (out.length ? 74 : 75)) { out.push(cur); cur = ''; bytes = 0; }
+    cur += ch; bytes += b;
+  }
+  out.push(cur);
+  return out.join('\r\n ');
+}
+function downloadIcs() {
+  const days = App.schedule.length ? App.schedule : fallbackSchedule();
+  const site = App.settings.siteUrl || location.href.split('#')[0].split('?')[0];
+  const stamp = icsDate(Date.now());
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Siraj Group SQU//Siraj Quiz 2026//AR', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'X-WR-CALNAME:مسابقة سراج الثقافية', 'X-WR-TIMEZONE:Asia/Muscat'];
+  days.forEach(d => {
+    let desc = `السؤال ${d.n} من مسابقة سراج الثقافية. أسرع إجابة صحيحة تفوز! ${site}`;
+    let loc = site;
+    if (d.type === 'lecture') { desc = `سؤال اليوم يُطرح حصرياً في المحاضرة: ${d.lectureTitle || ''}. ${site}`; loc = d.lectureLocation || site; }
+    if (d.type === 'themed' && d.theme) desc = `يوم موضوعي: ${d.theme}. ${desc}`;
+    lines.push('BEGIN:VEVENT', `UID:siraj-quiz-2026-q${d.n}@siraj-squ`, `DTSTAMP:${stamp}`, `DTSTART:${icsDate(d.openAt)}`, `DTEND:${icsDate(d.closeAt || d.openAt + 3600000)}`,
+      `SUMMARY:${icsEscape('مسابقة سراج الثقافية — السؤال ' + d.n)}`, `DESCRIPTION:${icsEscape(desc)}`, `LOCATION:${icsEscape(loc)}`, `URL:${site}`,
+      'BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${icsEscape('سؤال سراج بعد 10 دقائق')}`, 'TRIGGER:-PT10M', 'END:VALARM', 'END:VEVENT');
+  });
+  lines.push('END:VCALENDAR');
+  const blob = new Blob([lines.map(icsFold).join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'مسابقة-سراج-الثقافية.ics';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+  toast('تم تجهيز ملف المواعيد. افتحه لإضافة الأسئلة الستة عشر إلى تقويمك.');
+}
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const isStandalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+let oneSignalLoading = null;
+function loadOneSignal() {
+  if (!ONESIGNAL_APP_ID) return Promise.reject(new Error('not_configured'));
+  if (oneSignalLoading) return oneSignalLoading;
+  oneSignalLoading = new Promise((resolve, reject) => {
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    const base = location.pathname.replace(/[^/]*$/, '');
+    OneSignalDeferred.push(async OS => {
+      try {
+        await OS.init({
+          appId: ONESIGNAL_APP_ID,
+          serviceWorkerPath: base.replace(/^\//, '') + 'sw.js',
+          serviceWorkerParam: { scope: base },
+          notifyButton: { enable: false },
+          allowLocalhostAsSecureOrigin: true
+        });
+        if (App.user) { try { await OS.login(App.user.pid); } catch (e) { } }
+        resolve(OS);
+      } catch (e) { reject(e); }
+    });
+    const s = document.createElement('script');
+    s.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js'; s.defer = true;
+    s.onerror = () => reject(new Error('load_failed'));
+    document.head.appendChild(s);
+  });
+  return oneSignalLoading;
+}
+async function enablePush() {
+  if (isIOS() && !isStandalone()) { $('#iosNote').hidden = false; $('#pushStatus').textContent = 'على الآيفون: أضف الموقع للشاشة الرئيسية أولاً'; return; }
+  if (!ONESIGNAL_APP_ID) { toast('الإشعارات غير مفعّلة بعد. أضف المواعيد إلى تقويمك بدلاً منها.'); return; }
+  if (!('Notification' in window)) { toast('متصفحك لا يدعم الإشعارات. أضف المواعيد إلى تقويمك.'); return; }
+  $('#pushStatus').textContent = 'جارٍ التفعيل…';
+  try {
+    const OS = await loadOneSignal();
+    await OS.Notifications.requestPermission();
+    if (Notification.permission === 'granted') {
+      store.set('siraj_push', 1); $('#pushStatus').textContent = 'الإشعارات مفعّلة ✅'; toast('تم تفعيل الإشعارات ✅ سنذكّرك قبل كل سؤال بـ10 دقائق.');
+    } else {
+      $('#pushStatus').textContent = 'لم يُسمح بالإشعارات. فعّلها من إعدادات المتصفح.';
+    }
+  } catch (e) {
+    $('#pushStatus').textContent = 'تعذّر تفعيل الإشعارات الآن';
+  }
+}
+function registerSW() {
+  if (!('serviceWorker' in navigator) || location.protocol === 'file:') return;
+  navigator.serviceWorker.register('sw.js', { scope: './' }).catch(() => { });
+}
+
+/* =====================================================================
+   الهيدر، الحركات، النوافذ
+   ===================================================================== */
+function setupHeader() {
+  const header = $('.site-header'); const btn = $('.menu-btn');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 10);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  btn.addEventListener('click', () => {
+    const open = !document.body.classList.contains('menu-open');
+    document.body.classList.toggle('menu-open', open); btn.setAttribute('aria-expanded', String(open));
+  });
+  $$('#mobileNav a').forEach(a => a.addEventListener('click', () => { document.body.classList.remove('menu-open'); btn.setAttribute('aria-expanded', 'false'); }));
+  let lastW = innerWidth;
+  addEventListener('resize', () => { if ((lastW < 480) !== (innerWidth < 480)) renderSchedule(); lastW = innerWidth; });
+}
+function setupReveal() {
+  const els = $$('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+  els.forEach(e => io.observe(e));
+}
+function setupDialogs() {
+  document.addEventListener('click', e => {
+    const open = e.target.closest('[data-open-reminder]');
+    if (open) { e.preventDefault(); $('#iosNote').hidden = !(isIOS() && !isStandalone()); $('#reminderDlg').showModal(); return; }
+    const close = e.target.closest('[data-close]');
+    if (close) { close.closest('dialog').close(); return; }
+    if (e.target.tagName === 'DIALOG') e.target.close(); // الضغط خارج النافذة
+  });
+  $('#remIcs').onclick = downloadIcs;
+  $('#icsBtn').onclick = downloadIcs;
+  $('#remPush').onclick = enablePush;
+  if (store.get('siraj_push') === 1) $('#pushStatus').textContent = 'الإشعارات مفعّلة ✅';
+}
+
+/* =====================================================================
+   وضع الاختبار: خادم وهمي يحاكي Code.gs بنفس القواعد
+   ===================================================================== */
+const Mock = (() => {
+  const KEY = 'siraj_mock_v1';
+  const settings = Object.assign({}, DEFAULTS, { instagramUrl: SOCIAL.instagram, videoUrl: VIDEO_URL, finalEvening: { at: muscatMs('2026-12-14', '19:30'), date: '2026-12-14', time: '19:30', location: 'مسرح الجامعة (مثال تجريبي)' } });
+  const questions = [
+    { id: '1', date: '2026-11-15', type: 'daily', theme: '', questionText: 'كم عدد محافظات سلطنة عُمان؟', answerType: 'mcq', options: ['9', '10', '11', '12'], correctAnswer: '11', acceptedAnswers: [], status: 'ready' },
+    { id: '2', date: '2026-11-16', type: 'lecture', theme: '', questionText: 'من مؤلف كتاب «تحفة الأعيان بسيرة أهل عُمان»؟', answerType: 'text', options: [], correctAnswer: 'نور الدين السالمي',
+      acceptedAnswers: ['السالمي', 'عبدالله بن حميد السالمي', 'الإمام نور الدين السالمي', 'عبد الله السالمي'], lectureTitle: 'محاضرة: كنوز المخطوطات العُمانية', lectureLocation: 'قاعة المحاضرات الكبرى – كلية التربية', lectureTime: '19:00', lectureCode: 'سراج2026', status: 'ready' },
+    { id: '3', date: '2026-11-17', type: 'themed', theme: 'التراث العُماني', questionText: 'ما اسم القلعة العُمانية التي أُدرجت في قائمة اليونسكو للتراث العالمي عام 1987م؟', answerType: 'text', options: [], correctAnswer: 'قلعة بهلاء', acceptedAnswers: ['بهلاء', 'بهلا', 'قلعه بهلا', 'حصن بهلاء'], status: 'ready' }
+  ];
+  let db = store.get(KEY) || { offset: 0, participants: [], answers: [] };
+  const save = () => store.set(KEY, db);
+  const nowMs = () => Date.now() + db.offset;
+  const SCENARIOS = [
+    ['قبل الموعد (السؤال بعد 15 ثانية)', '2026-11-15 18:59:45'],
+    ['قبل انطلاق المسابقة', '2026-11-10 12:00'],
+    ['السؤال مفتوح (اختيار من متعدد)', '2026-11-15 19:00:05'],
+    ['يوم محاضرة (قبل الموعد بـ20 ثانية)', '2026-11-16 18:59:40'],
+    ['يوم محاضرة (باب الإجابة مفتوح)', '2026-11-16 19:03'],
+    ['سؤال موضوعي (إجابة نصية)', '2026-11-17 19:01'],
+    ['بعد الإجابة (تأكيد الاستلام)', 'submitted'],
+    ['انتهى وقت الإجابة', '2026-11-15 20:05'],
+    ['لا سؤال اليوم (الخميس)', '2026-11-19 12:00'],
+    ['السؤال في الطريق (بدون نص)', '2026-11-18 19:02'],
+    ['انتهت المسابقة', '2026-12-10 10:00'],
+    ['الوقت الحقيقي', 'real']
+  ];
+  function setTime(str) {
+    const [d, t] = str.split(' '); const [hh, mm, ss] = t.split(':');
+    db.offset = muscatMs(d, `${hh}:${mm}`) + (Number(ss) || 0) * 1000 - Date.now(); save();
+  }
+  function days() {
+    const out = []; let n = 0; const win = settings.answerWindowMinutes * 60000;
+    for (let t = muscatMs(settings.startDate); t <= muscatMs(settings.endDate); t += DAY) {
+      const dow = muscatDow(t); if (dow > 3) continue;
+      n++; const date = muscatDateStr(t); const q = questions.find(x => x.date === date) || null;
+      const openAt = muscatMs(date, q && q.type === 'lecture' && q.lectureTime ? q.lectureTime : settings.questionTime);
+      out.push({ n, date, dow, question: q, openAt, closeAt: openAt + win });
+    }
+    return out;
+  }
+  const pub = d => ({ n: d.n, date: d.date, dow: d.dow, openAt: d.openAt, closeAt: d.closeAt, type: d.question ? d.question.type : 'daily',
+    theme: d.question && d.question.type === 'themed' ? d.question.theme : '', lectureTitle: d.question && d.question.type === 'lecture' ? d.question.lectureTitle : '',
+    lectureLocation: d.question && d.question.type === 'lecture' ? d.question.lectureLocation : '', lectureTime: d.question && d.question.type === 'lecture' ? d.question.lectureTime : '' });
+  function compute(now) {
+    const ds = days(); const last = ds[ds.length - 1];
+    if (now >= last.closeAt) return { state: 'ended' };
+    const today = muscatDateStr(now); const day = ds.find(d => d.date === today); const next = ds.find(d => d.openAt > now);
+    if (!day) return now < ds[0].openAt && today < ds[0].date ? { state: 'before', beforeStart: true, next: pub(next) } : { state: 'off', next: next ? pub(next) : null };
+    const q = day.question; const base = { day: pub(day), questionId: q ? q.id : null, openAt: day.openAt, closeAt: day.closeAt };
+    const nextAfter = ds[ds.indexOf(day) + 1] ? pub(ds[ds.indexOf(day) + 1]) : null;
+    if (q && q.type === 'lecture') {
+      const phase = now < day.openAt ? 'before' : now < day.closeAt ? 'open' : 'closed';
+      if (phase === 'closed') return Object.assign(base, { state: 'closed', next: nextAfter });
+      return Object.assign(base, { state: 'lecture', phase, lecture: { title: q.lectureTitle, location: q.lectureLocation, time: q.lectureTime } });
+    }
+    if (now < day.openAt) return Object.assign(base, { state: 'before', next: pub(day) });
+    if (now >= day.closeAt) return Object.assign(base, { state: 'closed', next: nextAfter });
+    if (!q || q.status !== 'ready') return Object.assign(base, { state: 'pending' });
+    return Object.assign(base, { state: 'open', question: { id: q.id, text: q.questionText, type: q.type, theme: q.theme, answerType: q.answerType, options: q.answerType === 'mcq' ? q.options : [] } });
+  }
+  function stateFor(pid) {
+    const st = compute(nowMs());
+    const p = db.participants.find(x => x.pid === pid);
+    if (p && st.questionId) { const a = db.answers.find(x => x.qid === st.questionId && x.sid === p.studentId); if (a) st.myAnswer = { receivedAt: a.ts }; }
+    return st;
+  }
+  function winners() {
+    const n = nowMs(); const d1 = days()[0];
+    return n > d1.closeAt ? [{ questionId: '1', n: 1, date: '2026-11-15', name: 'مثال تجريبي: سارة محمد البلوشية', gender: 'female' }] : [];
+  }
+  function correct(q, a) { const n = normalizeArabic(a); return [q.correctAnswer].concat(q.answerType === 'text' ? q.acceptedAnswers : []).map(normalizeArabic).includes(n); }
+  async function handle(action, p) {
+    await sleep(150 + Math.random() * 350);
+    const serverNow = nowMs(); const receivedAt = serverNow;
+    switch (action) {
+      case 'init': return { ok: true, serverNow, settings, schedule: days().map(d => Object.assign(pub(d), { status: serverNow >= d.closeAt ? 'past' : d.date === muscatDateStr(serverNow) ? 'today' : 'upcoming' })), winners: winners(), state: stateFor(p.pid) };
+      case 'getState': return { ok: true, serverNow, state: stateFor(p.pid) };
+      case 'register': {
+        const ex = db.participants.find(x => x.studentId === p.studentId);
+        if (ex) return ex.phone === p.phone ? { ok: true, recovered: true, serverNow, participant: ex } : { ok: false, code: 'exists', field: 'studentId', error: 'هذا الرقم الجامعي مسجّل مسبقاً. استعد حسابك برقمك الجامعي ورقم هاتفك المسجّل.' };
+        if (db.participants.find(x => x.phone === p.phone)) return { ok: false, code: 'phone_used', field: 'phone', error: 'رقم الهاتف مستخدم في تسجيل آخر. كل مشارك يسجّل برقم جامعي واحد.' };
+        if (db.participants.find(x => x.email === p.email)) return { ok: false, code: 'email_used', field: 'email', error: 'البريد الجامعي مستخدم في تسجيل آخر.' };
+        const u = { pid: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random(), name: p.name, studentId: p.studentId, gender: p.gender, phone: p.phone, email: p.email };
+        db.participants.push(u); save();
+        return { ok: true, serverNow, participant: { pid: u.pid, name: u.name, studentId: u.studentId, gender: u.gender } };
+      }
+      case 'recover': {
+        const u = db.participants.find(x => x.studentId === p.studentId && x.phone === p.phone);
+        return u ? { ok: true, serverNow, participant: { pid: u.pid, name: u.name, studentId: u.studentId, gender: u.gender } } : { ok: false, code: 'not_found', error: 'لم نجد حساباً بهذا الرقم الجامعي ورقم الهاتف' };
+      }
+      case 'verifyLectureCode': {
+        const st = compute(serverNow); const q = questions.find(x => x.id === st.questionId);
+        if (!q || q.type !== 'lecture') return { ok: false, code: 'no_lecture', error: 'لا توجد محاضرة اليوم' };
+        if (st.phase !== 'open') return { ok: false, code: 'not_open', error: 'لم يُفتح باب الإجابة بعد' };
+        if (normalizeArabic(p.code).replace(/\s/g, '') !== normalizeArabic(q.lectureCode).replace(/\s/g, '')) return { ok: false, code: 'wrong_code', error: 'رمز المحاضرة غير صحيح' };
+        return { ok: true, serverNow, questionId: q.id, answerType: q.answerType, options: q.options, closeAt: st.closeAt };
+      }
+      case 'submitAnswer': {
+        const u = db.participants.find(x => x.pid === p.pid); if (!u) return { ok: false, code: 'not_registered', error: 'لم نجد تسجيلك، سجّل أو استعد حسابك' };
+        const st = compute(receivedAt); const q = questions.find(x => x.id === st.questionId);
+        if (!q || !(st.state === 'open' || (st.state === 'lecture' && st.phase === 'open'))) return { ok: false, code: 'closed', error: 'لا يوجد سؤال مفتوح الآن' };
+        if (p.questionId !== q.id) return { ok: false, code: 'wrong_question', error: 'هذا السؤال لم يعد مفتوحاً' };
+        if (q.type === 'lecture' && normalizeArabic(p.lectureCode).replace(/\s/g, '') !== normalizeArabic(q.lectureCode).replace(/\s/g, '')) return { ok: false, code: 'wrong_code', error: 'رمز المحاضرة غير صحيح' };
+        const dup = db.answers.find(x => x.qid === q.id && x.sid === u.studentId);
+        if (dup) return { ok: true, duplicate: true, serverNow, questionId: q.id, receivedAt: dup.ts };
+        db.answers.push({ qid: q.id, pid: u.pid, sid: u.studentId, answer: p.answer, ts: receivedAt, isCorrect: correct(q, p.answer) }); save();
+        console.info('[TEST_MODE] الإجابة', p.answer, correct(q, p.answer) ? 'صحيحة' : 'خاطئة');
+        return { ok: true, serverNow, questionId: q.id, receivedAt };
+      }
+      default: return { ok: false, code: 'unknown_action', error: 'إجراء غير معروف' };
+    }
+  }
+  async function scenario(value) {
+    if (value === 'real') { db.offset = 0; save(); }
+    else if (value === 'submitted') {
+      setTime('2026-11-15 19:00:05');
+      if (!App.user) {
+        const d = await handle('register', { name: 'مشارك تجريبي سراج', studentId: '135790', phone: '91234567', email: 's135790@student.squ.edu.om', gender: 'male' });
+        if (d.ok) { App.user = d.participant; store.set('siraj_user', d.participant); renderRegistration(); }
+      }
+      await handle('submitAnswer', { pid: App.user.pid, questionId: '1', answer: '11' });
+    } else setTime(value);
+    App.lecture = null; try { sessionStorage.removeItem('siraj_lecture'); } catch (e) { }
+    store.del('siraj_pending'); App.firedTargets.clear(); App.selectedDay = null;
+    await loadInit();
+  }
+  function reset() { db = { offset: 0, participants: [], answers: [] }; save(); store.del('siraj_user'); store.del('siraj_answers'); store.del('siraj_pending'); App.user = null; renderRegistration(); loadInit(); }
+  return { handle, SCENARIOS, scenario, reset, nowMs };
+})();
+
+function setupTestPanel() {
+  const fab = document.createElement('button');
+  fab.className = 'test-fab'; fab.type = 'button'; fab.textContent = '🧪 وضع الاختبار';
+  document.body.appendChild(fab);
+  const grid = $('#testGrid');
+  grid.innerHTML = Mock.SCENARIOS.map(([label, v]) => `<button type="button" data-sc="${v}">${label}</button>`).join('') +
+    `<button type="button" class="wide" data-reset>مسح بيانات التجربة (المشاركون والإجابات)</button>`;
+  grid.addEventListener('click', async e => {
+    const b = e.target.closest('button'); if (!b) return;
+    $('#testDlg').close();
+    if (b.hasAttribute('data-reset')) { Mock.reset(); toast('تم مسح بيانات التجربة'); return; }
+    await Mock.scenario(b.dataset.sc);
+    toast('الحالة: ' + b.textContent);
+    $('#question').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+  fab.onclick = () => {
+    $('#testClock').textContent = 'ساعة الخادم الوهمية: ' + F_DAYFULL.format(Mock.nowMs()) + ' · ' + fmtStamp(Mock.nowMs()).slice(0, 8) + ' — رمز المحاضرة التجريبي: سراج2026';
+    $('#testDlg').showModal();
+  };
+}
+
+boot();
+</script>
+</body>
+</html>
